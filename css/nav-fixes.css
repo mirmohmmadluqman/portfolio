@@ -1,0 +1,36 @@
+/* Navigation layout fixes for search integration */
+.nav-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.nav-logo {
+    flex: 0 0 auto;
+}
+
+.nav-menu {
+    flex: 0 1 auto;
+    margin: 0 0.5rem;
+}
+
+.search-container {
+    flex: 0 0 auto;
+}
+
+.hamburger {
+    flex: 0 0 auto;
+    margin-left: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .nav-link {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .search-bar {
+        width: 120px;
+    }
+}

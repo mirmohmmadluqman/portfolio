@@ -1,0 +1,346 @@
+/* Additional CSS for enhanced visual effects and animations */
+
+/* Enhanced Glitch Effect */
+@keyframes glitch-enhanced {
+  0%, 100% { 
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  10% { 
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(90deg);
+  }
+  20% { 
+    transform: translate(-2px, -2px);
+    filter: hue-rotate(180deg);
+  }
+  30% { 
+    transform: translate(2px, 2px);
+    filter: hue-rotate(270deg);
+  }
+  40% { 
+    transform: translate(2px, -2px);
+    filter: hue-rotate(360deg);
+  }
+  50% { 
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(180deg);
+  }
+  60% { 
+    transform: translate(-2px, -2px);
+    filter: hue-rotate(90deg);
+  }
+  70% { 
+    transform: translate(2px, 2px);
+    filter: hue-rotate(270deg);
+  }
+  80% { 
+    transform: translate(2px, -2px);
+    filter: hue-rotate(180deg);
+  }
+  90% { 
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(90deg);
+  }
+}
+
+.glitch:hover {
+  animation: glitch-enhanced 0.3s ease-in-out infinite;
+}
+
+/* Cyberpunk Grid Effect */
+.cyber-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -2;
+  animation: cyber-grid-move 20s linear infinite;
+}
+
+@keyframes cyber-grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Enhanced Particle Effects */
+.particle {
+  position: absolute;
+  background: var(--primary-color);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-float 6s ease-in-out infinite;
+}
+
+@keyframes particle-float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-100px) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-darker);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-panda {
+  font-size: 4rem;
+  animation: loading-bounce 1s ease-in-out infinite;
+  margin-bottom: var(--spacing-md);
+}
+
+@keyframes loading-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.1); }
+}
+
+.loading-text {
+  font-family: var(--font-mono);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.loading-bar {
+  width: 300px;
+  height: 4px;
+  background: var(--surface-dark);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Enhanced Terminal Effects */
+.terminal-modal.show {
+  display: flex;
+  animation: terminal-show 0.3s ease-out;
+}
+
+@keyframes terminal-show {
+  from { 
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.terminal-window {
+  animation: terminal-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes terminal-glow {
+  from { box-shadow: 0 0 20px rgba(57, 255, 20, 0.2); }
+  to { box-shadow: 0 0 30px rgba(57, 255, 20, 0.4); }
+}
+
+/* Code Block Enhancements */
+.code-block {
+  position: relative;
+  margin: var(--spacing-md) 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.code-header {
+  background: var(--surface-dark);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-lang {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.copy-btn:hover {
+  background: var(--primary-color);
+  color: var(--background-dark);
+}
+
+/* Achievement Badges */
+.achievement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--primary-color);
+  margin: 4px;
+  transition: var(--transition-normal);
+}
+
+.achievement-badge:hover {
+  background: var(--primary-color);
+  color: var(--background-dark);
+  transform: translateY(-2px);
+}
+
+.achievement-icon {
+  font-size: 1rem;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(0, 255, 136, 0.1);
+  z-index: 1001;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* Enhanced Hover Effects */
+.hover-glow {
+  transition: var(--transition-normal);
+}
+
+.hover-glow:hover {
+  filter: drop-shadow(0 0 10px var(--primary-color));
+  transform: scale(1.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Text Selection */
+::selection {
+  background: var(--primary-color);
+  color: var(--background-dark);
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: var(--background-dark);
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .matrix-bg,
+  .terminal-modal,
+  .loading-screen,
+  .scroll-progress {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #00ff00;
+    --background-dark: #000000;
+    --text-primary: #ffffff;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode Support (for browsers that don't default to dark) */
+@media (prefers-color-scheme: light) {
+  body {
+    /* Keep dark theme even in light mode preference */
+    background: var(--background-dark);
+    color: var(--text-primary);
+  }
+}

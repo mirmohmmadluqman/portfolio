@@ -1,0 +1,10 @@
+/* Timeline enhancements */
+
+/* Subtle color differences for odd/even timeline items */
+.timeline-item:nth-child(odd) .timeline-content {
+  background: linear-gradient(135deg, var(--surface-dark) 0%, rgba(0, 255, 136, 0.03) 100%);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  background: linear-gradient(135deg, rgba(76, 205, 196, 0.03) 0%, var(--surface-dark) 100%);
+}

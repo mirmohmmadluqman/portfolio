@@ -1,0 +1,67 @@
+/* Floating Contact Button Styles */
+.floating-contact-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 24px;
+    background-color: #db61a2;
+    background-image: linear-gradient(#fa3a91, #f7418b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(219, 97, 162, 0.5);
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s var(--transition-normal);
+    font-weight: 600;
+    font-family: var(--font-sans);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-contact-button i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.floating-contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(219, 97, 162, 0.7);
+    background-image: linear-gradient(#f7418b, #e91e63);
+}
+
+.floating-contact-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(219, 97, 162, 0.4);
+}
+
+/* Animation for attention */
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.floating-contact-button {
+    animation: gentle-float 3s ease-in-out infinite;
+}
+
+/* Stop animation on hover */
+.floating-contact-button:hover {
+    animation: none;
+    transform: translateY(-2px);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .floating-contact-button {
+        width: 50px;
+        height: 50px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .floating-contact-button i {
+        font-size: 1.25rem;
+    }
+}

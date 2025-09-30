@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mir Mohmmad Luqman - Web3 Developer</title>
+    <meta name="description" content="Web3 Developer specializing in smart contracts and dApps">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    <link rel="stylesheet" href="css/timeline-enhancements.css">
+    <link rel="stylesheet" href="css/floating-button.css">
+    <link rel="stylesheet" href="css/search-bar.css">
+    <link rel="stylesheet" href="css/nav-fixes.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://private-user-images.githubusercontent.com/196279479/495602184-b9e37f73-8a4d-48b3-8c9d-399c9c1bd47e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTkyMjQ0NTMsIm5iZiI6MTc1OTIyNDE1MywicGF0aCI6Ii8xOTYyNzk0NzkvNDk1NjAyMTg0LWI5ZTM3ZjczLThhNGQtNDhiMy04YzlkLTM5OWM5YzFiZDQ3ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkzMFQwOTIyMzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xOWNlNzk5ZDE0NzAyNzZmOWVlYmFkNzVhNWMwOGFhYTIwNWI3YjRhNjA2MzhjZWMxMzU2MDBlMmZjZjk2ZjJmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.r4Fln-lNvp9CL-ZxzV3pzRg7C54PWEwJG3A7S1M-i8I">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-panda"> <img class="floating-panda" src="https://media1.tenor.com/m/0REDhtdmP2gAAAAd/mirmohmmadluqman-mirmohmadluqman.gif" alt="Imagine Hacker" style="transform: translateY(0px);"></div>
+        <div class="loading-text">Initializing Web3</div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Background effects -->
+    <div class="cyber-grid"></div>
+    <div class="matrix-bg" id="matrix-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="https://avatars.githubusercontent.com/u/196279479?v=4" alt="Mir Mohmmad Luqman" class="logo-image" style="width: 32px; height: 32px; border-radius: 50%; margin-right: var(--spacing-xs);">
+                <span class="logo-text">Mir Mohmmad Luqman</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-section="home">home</a>
+                <a href="#about" class="nav-link" data-section="about">whoami</a>
+                <a href="#skills" class="nav-link" data-section="skills">build --dapps</a>
+                <a href="#projects" class="nav-link" data-section="projects">portfolio</a>
+                <a href="#research" class="nav-link" data-section="research">projects</a>
+                <a href="#contact" class="nav-link" data-section="contact">connect</a>
+            </div>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-bar" id="search-bar" placeholder="Search..." aria-label="Search">
+                <div class="search-results" id="search-results"></div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="glitch" data-text="Mir Mohmmad Luqman"><img src="https://avatars.githubusercontent.com/u/196279479?v=4" alt="Mir Mohmmad Luqman" class="logo-image" style="width: 48px; height: 48px; border-radius: 50%; margin-right: var(--spacing-sm);">
+                    Mir Mohmmad Luqman</h1>
+                    <div class="typewriter">
+                        <h2 id="typewriter-text"></h2>
+                    </div>
+                    <p class="hero-description">$Whoami<br><sub>🔥 Web3 Developer | 🥷 Security Reasercher | ✨ dApp Builder</sub></p>
+                    <div class="hero-affiliations">
+                        <a href="https://thecreed.xyz/" target="_blank" rel="noopener" class="affiliation-tag">
+                            <i class="fas fa-cube icon"></i>
+                            Creed.xyz
+                        </a>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> View Work</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get In Touch</a>
+                        <button class="btn btn-terminal" onclick="showTerminal(' whoami')"><i class="fas fa-terminal"></i> Terminal</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="panda-container">
+                        <img class="floating-panda" src="https://media1.tenor.com/m/bzUDKuR8Vb8AAAAd/hacker-hackerman.gif" alt="Floating Logo" style="transform: translateY(0px);">
+                        <div class="code-rain"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title"><span class="command-prompt">$ </span>whoami</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="terminal-output">
+                            <div class="output-line"><span class="property">name:</span> Mir Mohmmad Luqman</div>
+                            <div class="output-line"><span class="property">role:</span> Web3 Developer</div>
+                            <div class="output-line"><span class="property">status:</span> "🪴🐼🍣🪴 Uncertified Panda Trainer"</div>
+                        </div>
+                        <div class="bio">
+                            <p>🔍 I am a Web3 developer specializing in building secure and efficient decentralized applications. My expertise spans across the full stack of dApp development, from crafting robust smart contracts to integrating them with seamless frontends.</p>
+                            <p>🛡️ I'm proficient in Solidity, Foundry, Rust, and client-side technologies. I've developed multiple original projects and contributed to open-source Web3 tools.</p>
+                            <p>🎓 My focus is on EVM-based development, security tools like Echidna and Certora Prover, and blockchain integrations.</p>
+                            <div class="fun-facts">
+                                <h3>I build things (innovatively):</h3>
+                                <ul>
+                                    <li>🍧 Smart Contracts & dApps</li>
+                                    <li>🧁 Blockchain Tools</li>
+                                    <li>🍰 Web3 Integrations</li>
+                                    <li>🍬 Client-Side dApps</li>
+                                    <li>🍪 Security-Focused Apps</li>
+                                    <li>🥧 Decentralized Platforms</li>
+                                </ul>
+                                <p class="nom">Nom nom nom nom nom ...🐿️</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="panda-stats">
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="stat-icon">🏆</div>
+                                <div class="stat-number" data-count="34">0</div>
+                                <div class="stat-label">Repositories</div>
+                            </div>
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="stat-icon">🛠️</div>
+                                <div class="stat-number" data-count="265">0</div>
+                                <div class="stat-label">Contributions</div>
+                            </div>
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                                <div class="stat-icon">⭐</div>
+                                <div class="stat-number" data-count="4">0</div>
+                                <div class="stat-label">GitHub Stars</div>
+                            </div>
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                                <div class="stat-icon">📦</div>
+                                <div class="stat-number" data-count="500k+">0</div>
+                                <div class="stat-label">VS Code Downloads (Inspired)</div>
+                            </div>
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="450">
+                                <div class="stat-icon">👥</div>
+                                <div class="stat-number" data-count="3">0</div>
+                                <div class="stat-label">GitHub Followers</div>
+                            </div>
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="500">
+                                <div class="stat-icon">🏆</div>
+                                <div class="stat-number" data-count="3">0</div>
+                                <div class="stat-label">Following</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title"><span class="command-prompt">$ </span>build --dapps</h2>
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="fade-up">
+                        <h3>🔐 Web3 Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Smart Contract Development</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">dApp Integration</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Security Auditing</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Blockchain Tools</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3>💻 Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Solidity</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Rust</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TypeScript</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3>🛠️ Tools & Libraries</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item"><i class="fas fa-tools"></i><span>Foundry</span></div>
+                            <div class="tech-item"><i class="fas fa-bug"></i><span>Echidna</span></div>
+                            <div class="tech-item"><i class="fas fa-shield-alt"></i><span>Certora Prover</span></div>
+                            <div class="tech-item"><i class="fab fa-ethereum"></i><span>Ethers.js</span></div>
+                            <div class="tech-item"><i class="fab fa-js"></i><span>Web3.js</span></div>
+                            <div class="tech-item"><i class="fas fa-money-check"></i><span>Bankrun</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-demo">
+                    <h3>🎮 Interactive Demo</h3>
+                    <div class="demo-container">
+                        <div class="code-editor">
+                            <div class="editor-header"><span>web3-dapp.sol</span></div>
+                            <div class="editor-content" id="code-demo">
+                                <pre><code class="language-solidity">contract SampleDApp {
+    mapping(address =&gt; uint256) public balances;
+
+    function deposit() public payable {
+        // @audit-issue: Missing access control?
+        balances[msg.sender] += msg.value;
+    }
+
+    function withdraw(uint256 amount) public {
+        // @audit-issue: Potential reentrancy!
+        require(balances[msg.sender] &gt;= amount, "Insufficient balance");
+        (bool success,) = msg.sender.call{value: amount}("");
+        require(success, "Transfer failed");
+        balances[msg.sender] -= amount;
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="audit-results" id="audit-results">
+                            <h4>🔍 Build Results</h4>
+                            <div class="finding"><span class="severity critical">CRITICAL</span><span class="finding-text">Reentrancy vulnerability detected!</span></div>
+                            <div class="finding"><span class="severity high"></span><span class="finding-text">Missing access controls</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title"><span class="command-prompt">$ </span>~/portfolio</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">all</button>
+                    <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up">
+                        <div class="project-header">
+                            <h3>Raffle-Lottery</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/Raffle-Lottery" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Solidity raffle lottery system</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star</span></div>
+                    </div>
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-header">
+                            <h3>Eco-Credit</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/Eco-Credit" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>ERC-20 token for carbon offsetting</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star</span></div>
+                    </div>
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-header">
+                            <h3>TimeLockedEscrow</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/TimeLockedEscrow" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Time-locked escrow contract</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
+                    </div>
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-header">
+                            <h3>MEV-Protected-Auction</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/MEV-Protected-Auction" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>MEV-protected auction system</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
+                    </div>
+                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-header">
+                            <h3>Chraft-IDE</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Browser-based IDE for smart contracts</p></div>
+                        <div class="project-tech"><span class="tech-tag">Svelte</span><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 4 stars, 1 fork</span></div>
+                    </div>
+                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-header">
+                            <h3>URGraph</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/URGraph" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Graph visualization tool</p></div>
+                        <div class="project-tech"><span class="tech-tag">TypeScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star</span></div>
+                    </div>
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                        <div class="project-header">
+                            <h3>IqamahNow</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/IqamahNow" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Prayer time application</p></div>
+                        <div class="project-tech"><span class="tech-tag">TypeScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> </span></div>
+                    </div>
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="700">
+                        <div class="project-header">
+                            <h3>Mualim-AI</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/Mualim-AI" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>AI learning tool</p></div>
+                        <div class="project-tech"><span class="tech-tag">TypeScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 fork</span></div>
+                    </div>
+                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="800">
+                        <div class="project-header">
+                            <h3>PrivateKeyTextEncryption</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/PrivateKeyTextEncryption" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://pkte.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Text encryption using private keys</p></div>
+                        <div class="project-tech"><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 2 stars</span></div>
+                    </div>
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-header">
+                            <h3>PravaCustos</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/PravaCustos" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://pravacustos.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Secure digital asset custody</p></div>
+                        <div class="project-tech"><span class="tech-tag">HTML</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star, 1 fork</span></div>
+                    </div>
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="project-header">
+                            <h3>AURA</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/AURA" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://aura-auth.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Decentralized identity system</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span><span class="tech-tag">TypeScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 4 stars</span></div>
+                    </div>
+                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="1100">
+                        <div class="project-header">
+                            <h3>HedberaTimer</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/HedberaTimer" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://hedberatimer.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Timer with Hedera integration</p></div>
+                        <div class="project-tech"><span class="tech-tag">HTML</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> </span></div>
+                    </div>
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="1200">
+                        <div class="project-header">
+                            <h3>Abisar</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/Abisar" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://abisar.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Decentralized arbitration platform</p></div>
+                        <div class="project-tech"><span class="tech-tag">HTML</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> </span></div>
+                    </div>
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="1300">
+                        <div class="project-header">
+                            <h3>React-1DailyCalendar</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/React-1DailyCalendar" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://1dailycalendar.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Daily calendar app</p></div>
+                        <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">HTML</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> </span></div>
+                    </div>
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="1400">
+                        <div class="project-header">
+                            <h3>DailyCalendar</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/DailyCalendar" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Simple calendar application</p></div>
+                        <div class="project-tech"><span class="tech-tag">HTML</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> </span></div>
+                    </div>
+                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="1500">
+                        <div class="project-header">
+                            <h3>Vizta</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/Vizta" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://vizta.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Data visualization tool</p></div>
+                        <div class="project-tech"><span class="tech-tag">HTML</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> </span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research/Projects timeline -->
+        <section id="research" class="research">
+            <div class="container">
+                <h2 class="section-title"><span class="command-prompt">$ </span>~/projects.log</h2>
+                <div class="research-overview">
+                    <div class="overview-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-number">9+</div>
+                        <div class="card-label">Original Projects</div>
+                        <div class="card-timespan">2024-2025</div>
+                        <div class="card-icon">🏆</div>
+                    </div>
+                    <div class="overview-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-number">34</div>
+                        <div class="card-label">GitHub Repos</div>
+                        <div class="card-timespan">Open Source</div>
+                        <div class="card-icon">🔍</div>
+                    </div>
+                    <div class="overview-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-number">265</div>
+                        <div class="card-label">Contributions</div>
+                        <div class="card-timespan">Last Year</div>
+                        <div class="card-icon">🌐</div>
+                    </div>
+                    <div class="overview-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-number">3</div>
+                        <div class="card-label">Followers</div>
+                        <div class="card-timespan">Community</div>
+                        <div class="card-icon">💎</div>
+                    </div>
+                </div>
+                <div class="vulnerability-timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">🏆</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Freelance Web3 Developer</h4>
+                            <p class="timeline-date">2024-2025 • 1+ Years</p>
+                            <p>Developing secure dApps and smart contracts for various clients</p>
+                            <div class="severity-badge critical">9+ Projects Completed</div>
+                            <div class="audit-highlights">
+                                <div class="audit-category">
+                                    <span class="category-label">dApps</span>
+                                    <span class="category-count">5+</span>
+                                </div>
+                                <div class="audit-category">
+                                    <span class="category-label">Tools</span>
+                                    <span class="category-count">3+</span>
+                                </div>
+                                <div class="audit-category">
+                                    <span class="category-label">Integrations</span>
+                                    <span class="category-count">2+</span>
+                                </div>
+                                <div class="audit-category">
+                                    <span class="category-label">Utilities</span>
+                                    <span class="category-count">2+</span>
+                                </div>
+                            </div>
+                            <div class="audit-reports">
+                                <h5>Featured Projects</h5>
+                                <div class="report-links">
+                                    <a href="https://github.com/mirmohmmadluqman/Raffle-Lottery" target="_blank" class="report-link animate-in"><span class="report-icon">🚀</span>
+                                    <span class="report-name">Raffle-Lottery</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/Eco-Credit" target="_blank" class="report-link animate-in"><span class="report-icon">🌉</span>
+                                    <span class="report-name">Eco-Credit</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/TimeLockedEscrow" target="_blank" class="report-link animate-in"><span class="report-icon">₿</span>
+                                    <span class="report-name">TimeLockedEscrow</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/MEV-Protected-Auction" target="_blank" class="report-link animate-in"><span class="report-icon">🪙</span>
+                                    <span class="report-name">MEV-Protected-Auction</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank" class="report-link animate-in"><span class="report-icon">🎮</span>
+                                    <span class="report-name">Chraft-IDE</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/URGraph" target="_blank" class="report-link animate-in"><span class="report-icon">⚡</span>
+                                    <span class="report-name">URGraph</span></a>
+                                </div>
+                                <div class="metamask-snap-reports">
+                                    <h5>MetaMask Inspired Tools</h5>
+                                    <a href="https://github.com/mirmohmmadluqman/IqamahNow" target="_blank" class="report-link animate-in"><span class="report-icon">🦊</span>
+                                    <span class="report-name">IqamahNow</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">🌐</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Web3 Tool Development</h4>
+                            <p class="timeline-date">2024</p>
+                            <p>Built browser-based IDE combining Remix and Foundry for smart contract development</p>
+                            <div class="severity-badge high">Key Features</div>
+                            <div class="vuln-details">
+                                <span class="vuln-tag">Code Editing</span>
+                                <span class="vuln-tag">Testing</span>
+                                <span class="vuln-tag">Deployment</span>
+                                <span class="vuln-tag">Auditing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">💰</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>DeFi Project Contributions</h4>
+                            <p class="timeline-date">2024</p>
+                            <p>Developed ERC-20 token for carbon offsetting and raffle systems</p>
+                            <div class="severity-badge high">Innovative Features</div>
+                            <div class="vuln-details">
+                                <span class="vuln-tag">Eco-Credit System</span>
+                                <span class="vuln-tag">Raffle Mechanics</span>
+                                <span class="vuln-tag">MEV Protection</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">🐍</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Rust & Solidity Practice</h4>
+                            <p class="timeline-date">2024</p>
+                            <p>Hands-on projects in Rust for blockchain and advanced Solidity development</p>
+                            <div class="severity-badge critical">Multiple Repos</div>
+                            <div class="vuln-details">
+                                <span class="vuln-tag">Rust-Practice-Cyfrin</span>
+                                <span class="vuln-tag">Foundry-Fundamentals</span>
+                                <span class="vuln-tag">MS-BIP39</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">⚡</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Portfolio & Utilities</h4>
+                            <p class="timeline-date">2023-2024</p>
+                            <p>Created various Web3 utilities and personal portfolio</p>
+                            <div class="severity-badge critical">Tools</div>
+                            <div class="vuln-details">
+                                <span class="vuln-tag">PrivateKeyTextEncryption</span>
+                                <span class="vuln-tag">HedberaTimer</span>
+                                <span class="vuln-tag">DailyCalendar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">📋</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Open Source Contributions</h4>
+                            <p class="timeline-date">2024</p>
+                            <p>Forked and contributed to projects like remix-project, sigle, flare-foundation</p>
+                            <div class="severity-badge critical">Enhancements</div>
+                            <div class="vuln-details">
+                                <span class="vuln-tag">Web3 Writing Platform</span>
+                                <span class="vuln-tag">Developer Hub</span>
+                                <span class="vuln-tag">IDE Improvements</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">👥</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Community Engagement</h4>
+                            <p class="timeline-date">2024</p>
+                            <p>Active on GitHub, X, Discord, LinkedIn, Reddit</p>
+                            <div class="severity-badge medium">Achievements</div>
+                            <div class="vuln-details">
+                                <span class="vuln-tag">Galaxy Brain Badge</span>
+                                <span class="vuln-tag">3 Followers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="research-impact">
+                    <h3 class="impact-title">🎯 Project Impact</h3>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <div class="impact-icon">🛡️</div>
+                            <h4>dApp Security</h4>
+                            <p>Built secure messaging, identity, and custody solutions</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">🌍</div>
+                            <h4>Web3 Tools</h4>
+                            <p>Created IDE and viewers for better development experience</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">🔬</div>
+                            <h4>DeFi Innovation</h4>
+                            <p>Developed eco-friendly tokens and protected auctions</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">⚖️</div>
+                            <h4>Open Source</h4>
+                            <p>Contributed to Web3 ecosystem tools and hubs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-visualizer-section">
+                    <h3 class="subsection-title"><span class="command-prompt">$ </span>./impact-analyzer --generate-report</h3>
+                    <div class="cve-timeline-viz">
+                        <h4>🎯 Project Timeline</h4>
+                        <div class="timeline-controls">
+                            <button class="timeline-btn active" data-filter="all">All Projects</button>
+                            <button class="timeline-btn" data-filter="original">Original</button>
+                            <button class="timeline-btn" data-filter="learning">Learning/Forks</button>
+                            <button class="timeline-btn" data-filter="web3">Web3</button>
+                            <button class="timeline-btn" data-filter="tools">Tools</button>
+                        </div>
+                        <div class="interactive-timeline">
+                            <svg class="timeline-svg" id="cve-timeline-svg" width="100%" height="300"></svg>
+                            <div class="timeline-legend">
+                                <div class="legend-item"><span class="legend-color critical"></span><span>Original (Real)</span></div>
+                                <div class="legend-item"><span class="legend-color high"></span><span>Learning/Forks</span></div>
+                                <div class="legend-item"><span class="legend-color medium"></span><span>Utilities</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="systems-impact-viz">
+                        <h4>🌐 Featured Repos & Technologies</h4>
+                        <div class="systems-grid">
+                            <div class="system-category" data-category="blockchain">
+                                <div class="system-icon">⛓️</div>
+                                <h5>Blockchain</h5>
+                                <div class="system-items">
+                                    <div class="system-item" data-impact="high">
+                                        <span class="system-name">Solidity Contracts</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:90%"></div></div>
+                                    </div>
+                                    <div class="system-item" data-impact="high">
+                                        <span class="system-name">dApps</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:85%"></div></div>
+                                    </div>
+                                    <div class="system-item" data-impact="medium">
+                                        <span class="system-name">EVM Tools</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:75%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="system-category" data-category="web">
+                                <div class="system-icon">📱</div>
+                                <h5>Web Apps</h5>
+                                <div class="system-items">
+                                    <div class="system-item" data-impact="critical">
+                                        <span class="system-name">React/TypeScript</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:95%"></div></div>
+                                    </div>
+                                    <div class="system-item" data-impact="high">
+                                        <span class="system-name">Svelte</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:80%"></div></div>
+                                    </div>
+                                    <div class="system-item" data-impact="medium">
+                                        <span class="system-name">HTML/CSS</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:70%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="system-category" data-category="tools">
+                                <div class="system-icon">🌐</div>
+                                <h5>Tools & Forks</h5>
+                                <div class="system-items">
+                                    <div class="system-item" data-impact="critical">
+                                        <span class="system-name">Remix Project</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:98%"></div></div>
+                                    </div>
+                                    <div class="system-item" data-impact="high">
+                                        <span class="system-name">Sigle Platform</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:70%"></div></div>
+                                    </div>
+                                    <div class="system-item" data-impact="medium">
+                                        <span class="system-name">Developer Hub</span>
+                                        <div class="impact-bar"><div class="impact-fill" style="width:60%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title"><span class="command-prompt">$ </span>ping Mir Mohmmad Luqman</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's build dApps together! 🐼</h3>
+                        <p>Interested in Web3 development, smart contract building, or just want to chat about blockchain and innovation?</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/mirmohmmadluqman" target="_blank">@mirmohmmadluqman</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://linkedin.com/@mirmohmmadluqman" target="_blank">@mirmohmmadluqman</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-twitter"></i>
+                                <div>
+                                    <h4>Twitter/X</h4>
+                                    <a href="https://x.com/mirmohmmadluqman" target="_blank">@mirmohmmadluqman</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-discord"></i>
+                                <div>
+                                    <h4>Discord</h4>
+                                    <a href="https://discord.com/@mirmohmmadluqman" target="_blank">@mirmohmmadluqman</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-reddit"></i>
+                                <div>
+                                    <h4>Reddit</h4>
+                                    <a href="https://reddit.com/@mirmohmmadluqman" target="_blank">@mirmohmmadluqman</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="donation-section">
+                            <h4>Help us to develop/build these projects</h4>
+                            <p>Be a Hero, tip a 🍺 🙂 - Your support helps fund Web3 development and open source tools!</p>
+                            <div class="crypto-donations">
+                                <div class="crypto-option">
+                                    <div class="crypto-header">
+                                        <i class="fab fa-ethereum"></i>
+                                        <span>Ethereum (ETH)</span>
+                                        <button class="copy-btn" onclick="copyToClipboard('eth-address', this)" title="Copy Address">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                    <div class="crypto-address" id="eth-address">0x867012e82708278fbda998030ace0aa9f14fd83e</div>
+                                </div>
+                            </div>
+                            <div class="github-sponsor">
+                                <a href="https://github.com/sponsors/mirmohmmadluqman" target="_blank" class="sponsor-btn">
+                                    <i class="fas fa-heart"></i>
+                                    Sponsor on GitHub
+                                </a>
+                            </div>
+                            <div class="project-funding-list">
+                                <h5>Projects Needing Funding</h5>
+                                <div class="funding-item">
+                                    <a href="https://github.com/mirmohmmadluqman/Eco-Credit" target="_blank">Eco-Credit</a>
+                                    <p>Funding Needed: $125,000</p>
+                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                </div>
+                                <div class="funding-item">
+                                    <a href="https://github.com/mirmohmmadluqman/TimeLockedEscrow" target="_blank">TimeLockedEscrow</a>
+                                    <p>Funding Needed: $75,000</p>
+                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                </div>
+                                <div class="funding-item">
+                                    <a href="https://github.com/mirmohmmadluqman/PravaCustos" target="_blank">PravaCustos</a>
+                                    <p>Funding Needed: $100,000</p>
+                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                </div>
+                                <div class="funding-item">
+                                    <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank">Chraft-IDE</a>
+                                    <p>Funding Needed: $150,000</p>
+                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                </div>
+                                <div class="funding-item">
+                                    <span>A secret project; you need to contact me for that and ask me what is that</span>
+                                    <p>Funding Needed: $150,000</p>
+                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-visual">
+                        <div class="panda-meditation">
+                            <div class="panda-zen">🐼</div>
+                            <div class="zen-circles">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>$Web3 Dev<></h3>
+                    <p>Building things innovatively since forever 🐼</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Find me</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/mirmohmmadluqman" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/@mirmohmmadluqman" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/mirmohmmadluqman" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>🏆 Stats</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="34">0</span>
+                            <span class="stat-label">Repos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="4">0</span>
+                            <span class="stat-label">Stars</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="0">0</span>
+                            <span class="stat-label">CVEs (Inspired)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Mir Mohmmad Luqman. Made with lot of sips of ☕</p>
+                <p class="easter-egg" onclick="konami()">Thanks, Let's 🎮</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terminal Modal -->
+    <div class="terminal-modal" id="terminal-modal">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="btn red"></span>
+                    <span class="btn yellow"></span>
+                    <span class="btn green"></span>
+                </div>
+                <span class="terminal-title">Mir Mohmmad Luqman@mirmohmmadluqman.web.app:~$</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line"><span class="prompt">Mir Mohmmad Luqman@mirmohmmadluqman.web.app:~$</span> <span class="cursor"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating button -->
+    <div class="floating-contact-button" id="floating-contact-button">
+        <i class="fas fa-comment-dots"></i>
+        <span>Contact Me</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/enhancements.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
