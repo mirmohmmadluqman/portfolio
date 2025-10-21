@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,9 @@
 <body>
     <!-- Loading screen -->
     <div class="loading-screen" id="loading-screen">
-        <div class="loading-panda"> <img class="floating-panda" src="https://media1.tenor.com/m/0REDhtdmP2gAAAAd/mirmohmmadluqman-mirmohmadluqman.gif" alt="Imagine Hacker" style="transform: translateY(0px);"></div>
+        <div class="loading-panda">
+            <img class="floating-panda" src="https://media1.tenor.com/m/0REDhtdmP2gAAAAd/mirmohmmadluqman-mirmohmadluqman.gif" alt="Imagine Hacker" style="transform: translateY(0px);">
+        </div>
         <div class="loading-text">Initializing Web3</div>
         <div class="loading-bar">
             <div class="loading-progress" id="loading-progress"></div>
@@ -70,8 +72,10 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="glitch" data-text="Mir Mohmmad Luqman"><img src="https://avatars.githubusercontent.com/u/196279479?v=4" alt="Mir Mohmmad Luqman" class="logo-image" style="width: 48px; height: 48px; border-radius: 50%; margin-right: var(--spacing-sm);">
-                    Mir Mohmmad Luqman</h1>
+                    <h1 class="glitch" data-text="Mir Mohmmad Luqman">
+                        <img src="https://avatars.githubusercontent.com/u/196279479?v=4" alt="Mir Mohmmad Luqman" class="logo-image" style="width: 48px; height: 48px; border-radius: 50%; margin-right: var(--spacing-sm);">
+                        Mir Mohmmad Luqman
+                    </h1>
                     <div class="typewriter">
                         <h2 id="typewriter-text"></h2>
                     </div>
@@ -147,16 +151,11 @@
                                 <div class="stat-label">GitHub Stars</div>
                             </div>
                             <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-                                <div class="stat-icon">📦</div>
-                                <div class="stat-number" data-count="500k+">0</div>
-                                <div class="stat-label">VS Code Downloads (Inspired)</div>
-                            </div>
-                            <div class="stat-card" data-aos="fade-up" data-aos-delay="450">
                                 <div class="stat-icon">👥</div>
                                 <div class="stat-number" data-count="4">0</div>
-                                <div class="stat-label">GitHub Followers</div>
+                                <div class="stat-label">Followers</div>
                             </div>
-                            <div class="stat-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="450">
                                 <div class="stat-icon">🏆</div>
                                 <div class="stat-number" data-count="6">0</div>
                                 <div class="stat-label">Following</div>
@@ -233,7 +232,7 @@
                             <div class="editor-header"><span>web3-dapp.sol</span></div>
                             <div class="editor-content" id="code-demo">
                                 <pre><code class="language-solidity">contract SampleDApp {
-    mapping(address =&gt; uint256) public balances;
+    mapping(address => uint256) public balances;
 
     function deposit() public payable {
         // @audit-issue: Missing access control?
@@ -242,7 +241,7 @@
 
     function withdraw(uint256 amount) public {
         // @audit-issue: Potential reentrancy!
-        require(balances[msg.sender] &gt;= amount, "Insufficient balance");
+        require(balances[msg.sender] >= amount, "Insufficient balance");
         (bool success,) = msg.sender.call{value: amount}("");
         require(success, "Transfer failed");
         balances[msg.sender] -= amount;
@@ -269,73 +268,74 @@
                     <button class="filter-btn" data-filter="blockchain">Blockchain</button>
                     <button class="filter-btn" data-filter="tools">Tools</button>
                     <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
                 </div>
                 <div class="projects-grid">
                     <div class="project-card" data-category="blockchain" data-aos="fade-up">
-                        <div class="project-header">
-                            <h3>Vulfinance</h3>
-                            <div class="project-links">
-                                <a href="https://github.com/mirmohmmadluqman/Vulfinance" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-description"><p>VFAAH</p></div>
-                        <div class="project-tech"><span class="tech-tag">Shell</span></div>
-                        <div class="project-stats"><span><i class="fas fa-star"></i> Private</span></div>
-                    </div>
-                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="100">
                         <div class="project-header">
                             <h3>ChainLuck</h3>
                             <div class="project-links">
                                 <a href="https://github.com/mirmohmmadluqman/ChainLuck" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Decentralized luck-based protocol for raffles and lotteries</p></div>
+                        <div class="project-description"><p>Decentralized luck-based protocol built to enable transparent and trustless raffles, lotteries, and prize pools on-chain.</p></div>
                         <div class="project-tech"><span class="tech-tag">Solidity</span></div>
                         <div class="project-stats"><span><i class="fas fa-star"></i> 0 stars</span></div>
                     </div>
-                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="100">
                         <div class="project-header">
                             <h3>Eco-Credit</h3>
                             <div class="project-links">
                                 <a href="https://github.com/mirmohmmadluqman/Eco-Credit" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>ERC-20 token for carbon offsetting</p></div>
+                        <div class="project-description"><p>ERC-20 token for global carbon offsetting.</p></div>
                         <div class="project-tech"><span class="tech-tag">TypeScript</span></div>
                         <div class="project-stats"><span><i class="fas fa-star"></i> 1 star, 2 forks</span></div>
                     </div>
-                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="200">
                         <div class="project-header">
-                            <h3>Number-Oracle</h3>
+                            <h3>Chraft-IDE</h3>
                             <div class="project-links">
-                                <a href="https://github.com/mirmohmmadluqman/Number-Oracle" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Rust CLI guessing game</p></div>
-                        <div class="project-tech"><span class="tech-tag">Rust</span></div>
-                        <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
+                        <div class="project-description"><p>Browser-based IDE combining Remix and Foundry for smart contract development.</p></div>
+                        <div class="project-tech"><span class="tech-tag">Svelte</span><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 4 stars, 1 fork</span></div>
                     </div>
-                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="300">
                         <div class="project-header">
-                            <h3>ThreadedHTTP</h3>
+                            <h3>TimeLockedEscrow</h3>
                             <div class="project-links">
-                                <a href="https://github.com/mirmohmmadluqman/ThreadedHTTP" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/mirmohmmadluqman/TimeLockedEscrow" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Multithreaded HTTP server in Rust</p></div>
-                        <div class="project-tech"><span class="tech-tag">Rust</span></div>
-                        <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
+                        <div class="project-description"><p>Smart contract for time-locked escrow transactions.</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star</span></div>
                     </div>
-                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="400">
                         <div class="project-header">
-                            <h3>Rust-Book-Exercises</h3>
+                            <h3>MEV-Protected-Auction</h3>
                             <div class="project-links">
-                                <a href="https://github.com/mirmohmmadluqman/Rust-Book-Exercises" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/mirmohmmadluqman/MEV-Protected-Auction" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Rust book exercises</p></div>
-                        <div class="project-tech"><span class="tech-tag">Rust</span></div>
-                        <div class="project-stats"><span><i class="fas fa-star"></i> GNU AGPL v3</span></div>
+                        <div class="project-description"><p>Auction system with MEV protection mechanisms.</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star</span></div>
+                    </div>
+                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-header">
+                            <h3>AURA</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/AURA" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Blockchain-powered platform rewarding AURA Points for purchases and social interactions.</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 3 stars</span></div>
                     </div>
                     <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="600">
                         <div class="project-header">
@@ -344,7 +344,7 @@
                                 <a href="https://github.com/mirmohmmadluqman/WhispLink" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Anonymous whisper-sharing tool</p></div>
+                        <div class="project-description"><p>Minimal, anonymous whisper-sharing tool with self-destructing messages.</p></div>
                         <div class="project-tech"><span class="tech-tag">HTML</span></div>
                         <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
                     </div>
@@ -355,44 +355,406 @@
                                 <a href="https://github.com/mirmohmmadluqman/TextScout" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>CLI text search tool in Rust</p></div>
+                        <div class="project-description"><p>CLI text search tool built in Rust.</p></div>
                         <div class="project-tech"><span class="tech-tag">Rust</span></div>
                         <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
                     </div>
                     <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="800">
                         <div class="project-header">
-                            <h3>rust-book-and-projects</h3>
+                            <h3>Number-Oracle</h3>
                             <div class="project-links">
-                                <a href="https://github.com/mirmohmmadluqman/rust-book-and-projects" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/mirmohmmadluqman/Number-Oracle" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Rust learning projects</p></div>
+                        <div class="project-description"><p>Rust CLI guessing game with random number generation.</p></div>
                         <div class="project-tech"><span class="tech-tag">Rust</span></div>
-                        <div class="project-stats"><span><i class="fas fa-star"></i> GNU AGPL v3</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
                     </div>
-                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="900">
+                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-header">
+                            <h3>ThreadedHTTP</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/ThreadedHTTP" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Multithreaded HTTP server built in Rust.</p></div>
+                        <div class="project-tech"><span class="tech-tag">Rust</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> MIT License</span></div>
+                    </div>
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="project-header">
+                            <h3>IqamahNow</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/IqamahNow" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Prayer time application built with TypeScript.</p></div>
+                        <div class="project-tech"><span class="tech-tag">TypeScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 0 stars</span></div>
+                    </div>
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="1100">
                         <div class="project-header">
                             <h3>The-Observer-Paradox</h3>
                             <div class="project-links">
                                 <a href="https://github.com/mirmohmmadluqman/The-Observer-Paradox" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Philosophical visual art piece</p></div>
+                        <div class="project-description"><p>Philosophical visual art piece exploring existence and consciousness.</p></div>
                         <div class="project-tech"><span class="tech-tag">HTML/CSS/JS</span></div>
                         <div class="project-stats"><span><i class="fas fa-star"></i> Other</span></div>
                     </div>
-                    <div class="project-card" data-category="blockchain" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="1200">
                         <div class="project-header">
-                            <h3>Chraft-IDE</h3>
+                            <h3>Mualim-AI</h3>
                             <div class="project-links">
-                                <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/mirmohmmadluqman/Mualim-AI" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="project-description"><p>Browser-based IDE for smart contracts</p></div>
-                        <div class="project-tech"><span class="tech-tag">Svelte</span><span class="tech-tag">Solidity</span></div>
-                        <div class="project-stats"><span><i class="fas fa-star"></i> 4 stars, 1 fork</span></div>
+                        <div class="project-description"><p>AI-powered educational tool built with TypeScript.</p></div>
+                        <div class="project-tech"><span class="tech-tag">TypeScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star, 1 fork</span></div>
                     </div>
-                    <!-- Continue adding older projects as needed -->
+                    <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="1300">
+                        <div class="project-header">
+                            <h3>Eco-Credit-Website</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/mirmohmmadluqman/Eco-Credit-Website" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Website for Eco-Credit token project.</p></div>
+                        <div class="project-tech"><span class="tech-tag">TypeScript</span></div>
+                        <div class="project-stats"><span><i class="fas fa-star"></i> 1 star, 1 fork</span></div>
+                    </div>
+                    <div class="project-card" data-category="tools" data-aos="fade-up" data-aos-delay="1400">
+                        <div class="project-header">
+                            <h3>Security Research</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/sherlock-audit/2025-07-cap-mirmohmmadluqman" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-description"><p>Identified Role ID Collision vulnerability in AccessControl.sol (Sherlock Audit, Jul 2025).</p></div>
+                        <div class="project-tech"><span class="tech-tag">Solidity</span></div>
+                        <div class="project-stats"><span><i class="fas fa-file-pdf"></i> <a href="#replace-with-actual-pdf-link">View Report</a></span></div>
+                    </div>
+                </div>
+                <div class="full-repo-list" id="full-repo-list">
+                    <h4>All Repositories</h4>
+                    <div class="repo-item" data-category="other">
+                        <span class="repo-name">portfolio</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">JavaScript</span>
+                            <span class="repo-status">Public, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">Vulfinance</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Shell</span>
+                            <span class="repo-status">Private, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">ChainLuck</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Solidity</span>
+                            <span class="repo-status">Public, 0 stars, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="other">
+                        <span class="repo-name">mirmohmmadluqman</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Config</span>
+                            <span class="repo-status">Public, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">Number-Oracle</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Rust</span>
+                            <span class="repo-status">Public, MIT License, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">ThreadedHTTP</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Rust</span>
+                            <span class="repo-status">Public, MIT License, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">Rust-Book-Exercises</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Rust</span>
+                            <span class="repo-status">Private, GNU AGPL v3, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">WhispLink</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, MIT License, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">TextScout</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Rust</span>
+                            <span class="repo-status">Public, MIT License, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">rust-book-and-projects</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Rust</span>
+                            <span class="repo-status">Private, GNU AGPL v3, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">The-Observer-Paradox</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML/CSS/JS</span>
+                            <span class="repo-status">Public, Other, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">Chraft-IDE</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Svelte, Solidity</span>
+                            <span class="repo-status">Public, 4 stars, 1 fork, Apache 2.0, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">URGraph</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, 1 star, The Unlicense, Updated Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">Eco-Credit-Website</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, 1 star, 1 fork, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">Aspinator</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Other</span>
+                            <span class="repo-status">Private, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">Eco-Credit</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, 1 star, 2 forks, Other, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">IqamahNow</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">My-Portfolia</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">turbin3-prebuilder-2025</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Unknown</span>
+                            <span class="repo-status">Public, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">TimeLockedEscrow</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Solidity</span>
+                            <span class="repo-status">Public, 1 star, MIT License, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">MEV-Protected-Auction</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Solidity</span>
+                            <span class="repo-status">Public, 1 star, MIT License, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">Solidity-Compiler</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Svelte</span>
+                            <span class="repo-status">Public, Forked, Updated Sep 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">Mualim-AI</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, 1 star, 1 fork, The Unlicense, Updated Aug 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">Web3-Dev-Try</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Unknown</span>
+                            <span class="repo-status">Private, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">Rust-Practice-Cyfrin</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Rust</span>
+                            <span class="repo-status">Public, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">github-stats</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Python</span>
+                            <span class="repo-status">Public, Forked, GNU GPL v3, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">MS-BIP39</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">JavaScript</span>
+                            <span class="repo-status">Public, MIT License, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">Foundry-Fundamentals</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Solidity</span>
+                            <span class="repo-status">Public, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">PrivateKeyTextEncryption</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">CSS</span>
+                            <span class="repo-status">Public, 2 stars, Other, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">PravaCustos</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, 1 star, 1 fork, Other, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">AURA</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Solidity</span>
+                            <span class="repo-status">Public, 3 stars, Other, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">Mars-Bridge</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">JavaScript</span>
+                            <span class="repo-status">Public, MIT License, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">remix-project</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, Forked, Apache 2.0, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">developer-hub</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">MDX</span>
+                            <span class="repo-status">Public, Forked, MIT License, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">FAsset-Portfolio-Viewer-for-Flare-Coston-Coston2</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Private, MIT License, Updated Jul 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="blockchain">
+                        <span class="repo-name">infinity-core</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Solidity</span>
+                            <span class="repo-status">Public, Forked, GNU GPL v2, Updated Jun 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">sigle</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">TypeScript</span>
+                            <span class="repo-status">Public, Forked, MIT License, Updated Jun 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">HedberaTimer</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, Apache 2.0, Updated Jun 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">Abisar</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, CC0 1.0, Updated Jun 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">React-1DailyCalendar</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, Updated May 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">DailyCalendar</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, GNU GPL v3, Updated May 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">Vizta</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, GNU GPL v3, Updated May 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="web">
+                        <span class="repo-name">1DailyCalendar</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">HTML</span>
+                            <span class="repo-status">Public, Apache 2.0, Updated May 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="other">
+                        <span class="repo-name">ChatGPT</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Unknown</span>
+                            <span class="repo-status">Public, Updated May 2025</span>
+                        </div>
+                    </div>
+                    <div class="repo-item" data-category="tools">
+                        <span class="repo-name">smart-contract-sanctuary-ethereum</span>
+                        <div class="repo-details">
+                            <span class="repo-lang">Solidity</span>
+                            <span class="repo-status">Public, Forked, Updated Jul 2023</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/mirmohmmadluqman?tab=repositories" target="_blank" class="btn btn-primary">View All on GitHub</a>
                 </div>
             </div>
         </section>
@@ -403,7 +765,7 @@
                 <h2 class="section-title"><span class="command-prompt">$ </span>~/projects.log</h2>
                 <div class="research-overview">
                     <div class="overview-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-number">9+</div>
+                        <div class="card-number">12+</div>
                         <div class="card-label">Original Projects</div>
                         <div class="card-timespan">2024-2025</div>
                         <div class="card-icon">🏆</div>
@@ -434,59 +796,59 @@
                         </div>
                         <div class="timeline-content">
                             <h4>Freelance Web3 Developer</h4>
-                            <p class="timeline-date">2024-2025 • 1+ Years</p>
-                            <p>Developing secure dApps and smart contracts for various clients</p>
-                            <div class="severity-badge critical">9+ Projects Completed</div>
+                            <p class="timeline-date">2024-2025</p>
+                            <p>Developed secure dApps and smart contracts for various clients.</p>
+                            <div class="severity-badge critical">12+ Projects</div>
                             <div class="audit-highlights">
                                 <div class="audit-category">
                                     <span class="category-label">dApps</span>
-                                    <span class="category-count">5+</span>
+                                    <span class="category-count">6+</span>
                                 </div>
                                 <div class="audit-category">
                                     <span class="category-label">Tools</span>
+                                    <span class="category-count">4+</span>
+                                </div>
+                                <div class="audit-category">
+                                    <span class="category-label">Web Apps</span>
                                     <span class="category-count">3+</span>
-                                </div>
-                                <div class="audit-category">
-                                    <span class="category-label">Integrations</span>
-                                    <span class="category-count">2+</span>
-                                </div>
-                                <div class="audit-category">
-                                    <span class="category-label">Utilities</span>
-                                    <span class="category-count">2+</span>
                                 </div>
                             </div>
                             <div class="audit-reports">
                                 <h5>Featured Projects</h5>
                                 <div class="report-links">
-                                    <a href="https://github.com/mirmohmmadluqman/ChainLuck" target="_blank" class="report-link animate-in"><span class="report-icon">🚀</span>
-                                    <span class="report-name">ChainLuck</span></a>
-                                    <a href="https://github.com/mirmohmmadluqman/Eco-Credit" target="_blank" class="report-link animate-in"><span class="report-icon">🌉</span>
-                                    <span class="report-name">Eco-Credit</span></a>
-                                    <a href="https://github.com/mirmohmmadluqman/TimeLockedEscrow" target="_blank" class="report-link animate-in"><span class="report-icon">₿</span>
-                                    <span class="report-name">TimeLockedEscrow</span></a>
-                                    <a href="https://github.com/mirmohmmadluqman/MEV-Protected-Auction" target="_blank" class="report-link animate-in"><span class="report-icon">🪙</span>
-                                    <span class="report-name">MEV-Protected-Auction</span></a>
-                                    <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank" class="report-link animate-in"><span class="report-icon">🎮</span>
-                                    <span class="report-name">Chraft-IDE</span></a>
-                                    <a href="https://github.com/mirmohmmadluqman/URGraph" target="_blank" class="report-link animate-in"><span class="report-icon">⚡</span>
-                                    <span class="report-name">URGraph</span></a>
-                                </div>
-                                <div class="metamask-snap-reports">
-                                    <h5>MetaMask Inspired Tools</h5>
-                                    <a href="https://github.com/mirmohmmadluqman/IqamahNow" target="_blank" class="report-link animate-in"><span class="report-icon">🦊</span>
-                                    <span class="report-name">IqamahNow</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/ChainLuck" target="_blank" class="report-link animate-in"><span class="report-icon">🚀</span><span class="report-name">ChainLuck</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/Eco-Credit" target="_blank" class="report-link animate-in"><span class="report-icon">🌉</span><span class="report-name">Eco-Credit</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank" class="report-link animate-in"><span class="report-icon">🎮</span><span class="report-name">Chraft-IDE</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/WhispLink" target="_blank" class="report-link animate-in"><span class="report-icon">🔒</span><span class="report-name">WhispLink</span></a>
+                                    <a href="https://github.com/mirmohmmadluqman/TextScout" target="_blank" class="report-link animate-in"><span class="report-icon">🔍</span><span class="report-name">TextScout</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="timeline-item" data-aos="fade-left">
                         <div class="timeline-marker">
+                            <div class="timeline-icon">🛡️</div>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Security Research</h4>
+                            <p class="timeline-date">Jul 2025</p>
+                            <p>Identified Role ID Collision in AccessControl.sol during Sherlock audit.</p>
+                            <div class="severity-badge high">Low/Medium Impact</div>
+                            <div class="vuln-details">
+                                <span class="vuln-tag">Bitwise OR Issue</span>
+                                <span class="vuln-tag">Access Control</span>
+                            </div>
+                            <a href="#replace-with-actual-pdf-link" target="_blank" class="report-link animate-in"><span class="report-icon">📄</span><span class="report-name">View Report</span></a>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
                             <div class="timeline-icon">🌐</div>
                         </div>
                         <div class="timeline-content">
                             <h4>Web3 Tool Development</h4>
-                            <p class="timeline-date">2024</p>
-                            <p>Built browser-based IDE combining Remix and Foundry for smart contract development</p>
+                            <p class="timeline-date">Aug-Sep 2025</p>
+                            <p>Built Chraft-IDE, a browser-based IDE for smart contract development.</p>
                             <div class="severity-badge high">Key Features</div>
                             <div class="vuln-details">
                                 <span class="vuln-tag">Code Editing</span>
@@ -496,30 +858,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-item" data-aos="fade-left">
                         <div class="timeline-marker">
                             <div class="timeline-icon">💰</div>
                         </div>
                         <div class="timeline-content">
                             <h4>DeFi Project Contributions</h4>
-                            <p class="timeline-date">2024</p>
-                            <p>Developed ERC-20 token for carbon offsetting and raffle systems</p>
+                            <p class="timeline-date">Jul-Sep 2025</p>
+                            <p>Developed ERC-20 tokens (Eco-Credit, AURA) and raffle/auction systems.</p>
                             <div class="severity-badge high">Innovative Features</div>
                             <div class="vuln-details">
-                                <span class="vuln-tag">Eco-Credit System</span>
+                                <span class="vuln-tag">Carbon Offsetting</span>
                                 <span class="vuln-tag">Raffle Mechanics</span>
                                 <span class="vuln-tag">MEV Protection</span>
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-item" data-aos="fade-right">
                         <div class="timeline-marker">
                             <div class="timeline-icon">🐍</div>
                         </div>
                         <div class="timeline-content">
                             <h4>Rust & Solidity Practice</h4>
-                            <p class="timeline-date">2024</p>
-                            <p>Hands-on projects in Rust for blockchain and advanced Solidity development</p>
+                            <p class="timeline-date">Jun-Jul 2025</p>
+                            <p>Hands-on projects in Rust (TextScout, Number-Oracle) and Solidity (Foundry-Fundamentals).</p>
                             <div class="severity-badge critical">Multiple Repos</div>
                             <div class="vuln-details">
                                 <span class="vuln-tag">Rust-Practice-Cyfrin</span>
@@ -528,30 +890,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-item" data-aos="fade-left">
                         <div class="timeline-marker">
                             <div class="timeline-icon">⚡</div>
                         </div>
                         <div class="timeline-content">
-                            <h4>Portfolio & Utilities</h4>
-                            <p class="timeline-date">2023-2024</p>
-                            <p>Created various Web3 utilities and personal portfolio</p>
+                            <h4>Web Apps & Utilities</h4>
+                            <p class="timeline-date">May-Jun 2025</p>
+                            <p>Created web apps (IqamahNow, Abisar) and utilities (HedberaTimer).</p>
                             <div class="severity-badge critical">Tools</div>
                             <div class="vuln-details">
-                                <span class="vuln-tag">PrivateKeyTextEncryption</span>
+                                <span class="vuln-tag">IqamahNow</span>
                                 <span class="vuln-tag">HedberaTimer</span>
                                 <span class="vuln-tag">DailyCalendar</span>
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-item" data-aos="fade-right">
                         <div class="timeline-marker">
                             <div class="timeline-icon">📋</div>
                         </div>
                         <div class="timeline-content">
                             <h4>Open Source Contributions</h4>
-                            <p class="timeline-date">2024</p>
-                            <p>Forked and contributed to projects like remix-project, sigle, flare-foundation</p>
+                            <p class="timeline-date">Jun-Jul 2025</p>
+                            <p>Forked and contributed to remix-project, sigle, flare-foundation.</p>
                             <div class="severity-badge critical">Enhancements</div>
                             <div class="vuln-details">
                                 <span class="vuln-tag">Web3 Writing Platform</span>
@@ -560,14 +922,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-item" data-aos="fade-left">
                         <div class="timeline-marker">
                             <div class="timeline-icon">👥</div>
                         </div>
                         <div class="timeline-content">
                             <h4>Community Engagement</h4>
-                            <p class="timeline-date">2024</p>
-                            <p>Active on GitHub, X, Discord, LinkedIn, Reddit</p>
+                            <p class="timeline-date">Feb-Oct 2025</p>
+                            <p>Active on GitHub, X, Discord, LinkedIn, Reddit; earned Galaxy Brain badge.</p>
                             <div class="severity-badge medium">Achievements</div>
                             <div class="vuln-details">
                                 <span class="vuln-tag">Galaxy Brain Badge</span>
@@ -582,22 +944,22 @@
                         <div class="impact-item">
                             <div class="impact-icon">🛡️</div>
                             <h4>dApp Security</h4>
-                            <p>Built secure messaging, identity, and custody solutions</p>
+                            <p>Built secure messaging (WhispLink) and custody solutions (PravaCustos).</p>
                         </div>
                         <div class="impact-item">
                             <div class="impact-icon">🌍</div>
                             <h4>Web3 Tools</h4>
-                            <p>Created IDE and viewers for better development experience</p>
+                            <p>Created IDE (Chraft-IDE) and portfolio viewers for better dev experience.</p>
                         </div>
                         <div class="impact-item">
                             <div class="impact-icon">🔬</div>
                             <h4>DeFi Innovation</h4>
-                            <p>Developed eco-friendly tokens and protected auctions</p>
+                            <p>Developed eco-friendly tokens (Eco-Credit) and protected auctions.</p>
                         </div>
                         <div class="impact-item">
                             <div class="impact-icon">⚖️</div>
                             <h4>Open Source</h4>
-                            <p>Contributed to Web3 ecosystem tools and hubs</p>
+                            <p>Contributed to Web3 ecosystem tools and hubs (remix-project, sigle).</p>
                         </div>
                     </div>
                 </div>
@@ -730,8 +1092,8 @@
                             </div>
                         </div>
                         <div class="donation-section">
-                            <h4>Help us to develop/build these projects</h4>
-                            <p>Be an investor or donater. Fund our Web3 projects or our open source tools!</p>
+                            <h4>Support My Web3 Projects</h4>
+                            <p>Fund innovative dApps and open-source tools!</p>
                             <div class="crypto-donations">
                                 <div class="crypto-option">
                                     <div class="crypto-header">
@@ -755,27 +1117,27 @@
                                 <div class="funding-item">
                                     <a href="https://github.com/mirmohmmadluqman/Eco-Credit" target="_blank">Eco-Credit</a>
                                     <p>Funding Needed: $125,000</p>
-                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                    <p>$1,000-$10,000 donated by Mir Mohmmad Luqman</p>
                                 </div>
                                 <div class="funding-item">
                                     <a href="https://github.com/mirmohmmadluqman/TimeLockedEscrow" target="_blank">TimeLockedEscrow</a>
                                     <p>Funding Needed: $75,000</p>
-                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                    <p>$1,000-$10,000 donated by Mir Mohmmad Luqman</p>
                                 </div>
                                 <div class="funding-item">
                                     <a href="https://github.com/mirmohmmadluqman/PravaCustos" target="_blank">PravaCustos</a>
                                     <p>Funding Needed: $100,000</p>
-                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                    <p>$1,000-$10,000 donated by Mir Mohmmad Luqman</p>
                                 </div>
                                 <div class="funding-item">
                                     <a href="https://github.com/mirmohmmadluqman/Chraft-IDE" target="_blank">Chraft-IDE</a>
                                     <p>Funding Needed: $150,000</p>
-                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                    <p>$1,000-$10,000 donated by Mir Mohmmad Luqman</p>
                                 </div>
                                 <div class="funding-item">
-                                    <span>A secret project; you need to contact me for that and ask me what is that</span>
+                                    <span>A secret project (contact for details)</span>
                                     <p>Funding Needed: $150,000</p>
-                                    <p>$1,000-$10,000 will/are donated by Mir Mohmmad Luqman himself</p>
+                                    <p>$1,000-$10,000 donated by Mir Mohmmad Luqman</p>
                                 </div>
                             </div>
                         </div>
@@ -786,7 +1148,6 @@
                                 <img class="floating-panda" src="https://github.com/mirmohmmadluqman/portfolio/blob/main/Aspinator.jpg?raw=true" alt="Imagine Hacker" style="transform: translateY(0px);">
                                 <img class="floating-panda" src="https://github.com/mirmohmmadluqman/portfolio/blob/main/Khabib.JPG?raw=true" alt="Imagine Hacker" style="transform: translateY(0px);">
                             </div>
-                            
                             <div class="zen-circles">
                                 <div class="circle"></div>
                                 <div class="circle"></div>
@@ -827,8 +1188,8 @@
                             <span class="stat-label">Stars</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number" data-count="0">0</span>
-                            <span class="stat-label">CVEs (Inspired)</span>
+                            <span class="stat-number" data-count="1">0</span>
+                            <span class="stat-label">Security Reports</span>
                         </div>
                     </div>
                 </div>
@@ -870,132 +1231,3 @@
 </body>
 </html>
 ```
-
-### css/extra.css
-```
-/* Cyfrin Updraft-inspired theme overrides */
-:root {
-    --primary-color: rgb(41, 112, 255);  /* Cyfrin --colors-brand-500 blue */
-    --brand-50: hsl(220, 100%, 97%);
-    --brand-100: hsl(220, 100%, 91%);
-    --brand-200: hsl(220, 100%, 85%);
-    --brand-300: hsl(220, 100%, 76%);
-    --brand-400: hsl(220, 100%, 66%);
-    --brand-500: hsl(220, 100%, 58%);
-    --brand-600: hsl(220, 87%, 51%);
-    --brand-700: hsl(220, 100%, 46%);
-    --brand-800: hsl(220, 100%, 38%);
-    --brand-900: hsl(220, 100%, 31%);
-    --brand-950: hsl(220, 100%, 20%);
-    --bg-brand-solid: hsl(220, 86%, 51%);
-    
-    --accent-color: hsl(220, 100%, 66%);  /* Lighter blue for accents */
-    --secondary-color: hsl(220, 100%, 46%);  /* Darker blue for secondary */
-    
-    /* Override existing colors for Cyfrin theme */
-    --terminal-green: hsl(220, 100%, 58%);
-    --error-color: hsl(0, 100%, 60%);  /* Keep red for errors */
-    --warning-color: hsl(40, 100%, 50%);  /* Orange for warnings */
-}
-
-/* Adjust button styles for Cyfrin blue theme */
-.btn-primary {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--brand-600);
-}
-
-.btn-secondary {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-.btn-secondary:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-terminal {
-    border-color: var(--terminal-green);
-    color: var(--terminal-green);
-}
-
-.btn-terminal:hover {
-    background: var(--terminal-green);
-    color: white;
-}
-
-/* Update hero description for Cyfrin-inspired text */
-.hero-description {
-    color: var(--brand-300);
-}
-
-/* Timeline marker updates */
-.timeline-marker {
-    border-color: var(--primary-color);
-}
-
-/* Stats card updates */
-.stat-number {
-    color: var(--primary-color);
-}
-
-/* Skill progress updates */
-.skill-progress {
-    background: linear-gradient(90deg, var(--brand-500), var(--brand-700));
-}
-
-/* Tech item icons */
-.tech-item i {
-    color: var(--brand-400);
-}
-
-/* Project tech tags */
-.tech-tag {
-    background: rgba(var(--colors-brand-500), 0.1);
-    color: var(--brand-400);
-}
-
-/* Severity badges */
-.severity-badge.critical {
-    background: var(--error-color);
-}
-
-.severity-badge.high {
-    background: var(--warning-color);
-}
-
-.severity-badge.medium {
-    background: var(--accent-color);
-}
-
-/* Impact icons */
-.impact-icon {
-    color: var(--brand-500);
-}
-
-/* Funding item links */
-.funding-item a {
-    color: var(--brand-400);
-}
-
-.funding-item a:hover {
-    color: var(--brand-300);
-}
-
-/* Sponsor button */
-.sponsor-btn {
-    background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-700) 100%);
-}
-
-.sponsor-btn:hover {
-    background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-800) 100%);
-}
-
-/* Zen circles */
-.circle {
-    border-color: var(--brand-400);
-}
