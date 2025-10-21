@@ -1,0 +1,71 @@
+.bug-report {
+background-color: var(--surface-dark);
+border: 1px solid var(--primary-color);
+border-radius: 8px;
+padding: 1rem;
+margin: 1rem 0;
+box-shadow: 0 2px 8px rgba(0, 255, 136, 0.1);
+}
+.bug-report h3 {
+color: var(--primary-color);
+margin-bottom: 0.5rem;
+}
+.bug-report p {
+color: var(--text-secondary);
+font-size: 0.9rem;
+}
+.bug-report img {
+max-width: 100%;
+height: auto;
+border-radius: 4px;
+margin-top: 0.5rem;
+}
+/* Styles for repositories table */
+.repo-table {
+width: 100%;
+border-collapse: collapse;
+margin: 1rem 0;
+}
+.repo-table th, .repo-table td {
+padding: 0.8rem;
+text-align: left;
+border-bottom: 1px solid var(--surface-light);
+}
+.repo-table th {
+background-color: rgba(0, 255, 136, 0.05);
+color: var(--text-primary);
+font-weight: 600;
+}
+.repo-table tr:hover {
+background-color: rgba(0, 255, 136, 0.1);
+}
+.repo-table a {
+color: var(--primary-color);
+text-decoration: none;
+}
+.repo-table a:hover {
+text-decoration: underline;
+}
+/* Profile image styles */
+.profile-img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+border: 2px solid var(--primary-color);
+margin: 1rem auto;
+display: block;
+}
+/* Interests section */
+.interests {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
+}
+.interests img {
+width: 200px;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
