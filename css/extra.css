@@ -1,71 +1,190 @@
-.bug-report {
-background-color: var(--surface-dark);
-border: 1px solid var(--primary-color);
-border-radius: 8px;
-padding: 1rem;
-margin: 1rem 0;
-box-shadow: 0 2px 8px rgba(0, 255, 136, 0.1);
+/* Cyfrin Updraft-inspired theme overrides for hybrid panda/hacker look */
+:root {
+    --primary-color: hsl(220, 100%, 58%);  /* Cyfrin --brand-500 blue for main accents */
+    --brand-50: hsl(220, 100%, 97%);
+    --brand-100: hsl(220, 100%, 91%);
+    --brand-200: hsl(220, 100%, 85%);
+    --brand-300: hsl(220, 100%, 76%);
+    --brand-400: hsl(220, 100%, 66%);
+    --brand-500: hsl(220, 100%, 58%);
+    --brand-600: hsl(220, 87%, 51%);
+    --brand-700: hsl(220, 100%, 46%);
+    --brand-800: hsl(220, 100%, 38%);
+    --brand-900: hsl(220, 100%, 31%);
+    --brand-950: hsl(220, 100%, 20%);
+    --bg-brand-solid: hsl(220, 86%, 51%);
+    
+    --accent-color: hsl(220, 100%, 66%);  /* Lighter blue accents */
+    --secondary-color: hsl(220, 100%, 46%);  /* Darker blue secondary */
+    
+    /* Blend with panda theme: Keep green terminal, add blue highlights */
+    --terminal-green: hsl(220, 100%, 58%);  /* Blue-green hybrid */
+    --error-color: hsl(0, 100%, 60%);  /* Red for errors */
+    --warning-color: hsl(40, 100%, 50%);  /* Orange warnings */
 }
-.bug-report h3 {
-color: var(--primary-color);
-margin-bottom: 0.5rem;
+
+/* Button updates with Cyfrin blue */
+.btn-primary {
+    background: var(--brand-500);
+    color: white;
 }
-.bug-report p {
-color: var(--text-secondary);
-font-size: 0.9rem;
+
+.btn-primary:hover {
+    background: var(--brand-600);
 }
-.bug-report img {
-max-width: 100%;
-height: auto;
-border-radius: 4px;
-margin-top: 0.5rem;
+
+.btn-secondary {
+    border-color: var(--brand-500);
+    color: var(--brand-500);
 }
-/* Styles for repositories table */
-.repo-table {
-width: 100%;
-border-collapse: collapse;
-margin: 1rem 0;
+
+.btn-secondary:hover {
+    background: var(--brand-500);
+    color: white;
 }
-.repo-table th, .repo-table td {
-padding: 0.8rem;
-text-align: left;
-border-bottom: 1px solid var(--surface-light);
+
+.btn-terminal {
+    border-color: var(--terminal-green);
+    color: var(--terminal-green);
 }
-.repo-table th {
-background-color: rgba(0, 255, 136, 0.05);
-color: var(--text-primary);
-font-weight: 600;
+
+.btn-terminal:hover {
+    background: var(--terminal-green);
+    color: white;
 }
-.repo-table tr:hover {
-background-color: rgba(0, 255, 136, 0.1);
+
+/* Hero text with blue accents */
+.hero-description {
+    color: var(--brand-200);
 }
-.repo-table a {
-color: var(--primary-color);
-text-decoration: none;
+
+/* Timeline marker blue border */
+.timeline-marker {
+    border-color: var(--brand-500);
 }
-.repo-table a:hover {
-text-decoration: underline;
+
+/* Stats number in blue */
+.stat-number {
+    color: var(--brand-500);
 }
-/* Profile image styles */
-.profile-img {
-width: 150px;
-height: 150px;
-border-radius: 50%;
-object-fit: cover;
-border: 2px solid var(--primary-color);
-margin: 1rem auto;
-display: block;
+
+/* Skill progress blue gradient */
+.skill-progress {
+    background: linear-gradient(90deg, var(--brand-500), var(--brand-700));
 }
-/* Interests section */
-.interests {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-justify-content: center;
+
+/* Tech icons blue */
+.tech-item i {
+    color: var(--brand-400);
 }
-.interests img {
-width: 200px;
-height: auto;
-border-radius: 8px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+/* Tech tags blue bg */
+.tech-tag {
+    background: hsla(220, 100%, 58%, 0.1);
+    color: var(--brand-400);
+}
+
+/* Severity badges keep colors but add blue border on hover */
+.severity-badge:hover {
+    border: 1px solid var(--brand-500);
+}
+
+/* Impact icons blue */
+.impact-icon {
+    color: var(--brand-500);
+}
+
+/* Funding links blue */
+.funding-item a {
+    color: var(--brand-400);
+}
+
+.funding-item a:hover {
+    color: var(--brand-500);
+}
+
+/* Sponsor button blue gradient */
+.sponsor-btn {
+    background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-700) 100%);
+}
+
+.sponsor-btn:hover {
+    background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-800) 100%);
+}
+
+/* Zen circles blue border */
+.circle {
+    border-color: var(--brand-400);
+}
+
+/* New: Collapsible full repo list (for projects section) */
+.full-repo-list {
+    background: var(--surface-dark);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+    border: 1px solid var(--brand-800);
+}
+
+.full-repo-list h4 {
+    color: var(--brand-500);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-mono);
+}
+
+.repo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border-left: 4px solid var(--brand-600);
+}
+
+.repo-name {
+    font-weight: 600;
+    color: var(--brand-400);
+}
+
+.repo-details {
+    text-align: right;
+    font-size: 0.85rem;
+}
+
+.repo-lang {
+    color: var(--brand-300);
+}
+
+.repo-status {
+    color: var(--text-muted);
+}
+
+/* Security report card style (new for bug report) */
+.security-report-card {
+    background: linear-gradient(135deg, var(--brand-950) 0%, var(--brand-900) 100%);
+    border: 1px solid var(--brand-700);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+}
+
+.security-report-card h4 {
+    color: var(--brand-400);
+    margin-bottom: var(--spacing-xs);
+}
+
+.security-report-card p {
+    color: var(--brand-200);
+    font-size: 0.9rem;
+}
+
+.security-report-card a {
+    color: var(--brand-500);
+    text-decoration: none;
+}
+
+.security-report-card a:hover {
+    text-decoration: underline;
 }
