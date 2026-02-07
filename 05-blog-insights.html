@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Blog/Insights | Mir Mohmmad Luqman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://api.fontshare.com/v2/css?f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap"
+        rel="stylesheet">
+    <link rel="prefetch" href="01-mir-mohmmad-luqman-cyberpunk-terminal-portfolio.html" as="document">
+    <link rel="prefetch" href="02-about-page.html" as="document">
+    <link rel="prefetch" href="03-projects-gallery.html" as="document">
+    <link rel="prefetch" href="04-skills-experience.html" as="document">
+    <link rel="prefetch" href="05-blog-insights.html" as="document">
+    <link rel="prefetch" href="06-contact-services.html" as="document">
+
+    <style>
+        :root {
+            --neon-green: #00ff88;
+            --terminal-bg: #0a0a0a;
+        }
+
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background-color: var(--terminal-bg);
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .text-neon {
+            color: var(--neon-green);
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        .border-neon {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.2), inset 0 0 10px rgba(0, 255, 136, 0.1);
+        }
+
+        .bg-neon-glow {
+            background: radial-gradient(circle at center, rgba(0, 255, 136, 0.15) 0%, transparent 70%);
+        }
+
+        .terminal-cursor::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes scanline {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        .scanline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0, 255, 136, 0.05), transparent);
+            animation: scanline 8s linear infinite;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .nav-item:hover .bracket {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .bracket {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item.active .bracket {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .nav-item.active {
+            color: #00ff88;
+        }
+
+        /* View Transitions */
+        @view-transition {
+            navigation: auto;
+        }
+
+        ::view-transition {
+            background-color: #0a0a0a;
+        }
+
+        ::view-transition-old(main-nav),
+        ::view-transition-new(main-nav) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+
+        ::view-transition-old(main-content) {
+            animation: 0.25s ease-out both fade-out;
+        }
+
+        ::view-transition-new(main-content) {
+            animation: 0.25s ease-in 0.1s both fade-in;
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+
+        .floating-contact-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 24px;
+            background: linear-gradient(#fa3a91, #f7418b);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(219, 97, 162, 0.5);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: gentle-float 3s ease-in-out infinite;
+        }
+
+        @keyframes gentle-float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .floating-contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(219, 97, 162, 0.7);
+            background: linear-gradient(#f7418b, #e91e63);
+            animation: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen relative grid-bg scanline selection:bg-[#00ff88] selection:text-black">
+        <!-- Navigation (Persistent) -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20"
+            style="view-transition-name: main-nav">
+            <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a id="nav-logo" href="01-mir-mohmmad-luqman-cyberpunk-terminal-portfolio.html"
+                    class="font-mono text-xl font-bold flex items-center gap-2 group">
+                    <span class="text-gray-500">~/</span>
+                    <span class="text-white group-hover:text-[#00ff88] transition-colors">portfolio</span>
+                    <span class="w-2 h-4 bg-[#00ff88] animate-pulse"></span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8 font-mono text-sm">
+                    <a id="nav-home" href="01-mir-mohmmad-luqman-cyberpunk-terminal-portfolio.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
+                    </a>
+                    <a id="nav-whoami" href="02-about-page.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
+                    </a>
+                    <a id="nav-build" href="04-skills-experience.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>build<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
+                    </a>
+                    <a id="nav-projects" href="03-projects-gallery.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
+                    </a>
+                    <a id="nav-insights" href="05-blog-insights.html"
+                        class="nav-item active text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>insights<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
+                    </a>
+                    <a id="nav-connect" href="06-contact-services.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="pt-24 min-h-screen flex flex-col" style="view-transition-name: main-content">
+
+            <!-- Page Header -->
+            <section class="px-6 py-12">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex items-center gap-4 mb-6">
+                        <iconify-icon icon="lucide:terminal-square" class="text-3xl text-[#00ff88]"></iconify-icon>
+                        <h1 class="font-mono text-3xl font-bold text-white">$ <span class="text-[#00ff88]">cd
+                                ./insights</span></h1>
+                    </div>
+
+                    <div
+                        class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-gray-800 pb-8">
+                        <p class="text-gray-400 font-mono text-sm max-w-xl">
+                            <span class="text-[#00ff88]">></span> Loading modules: Web3 Security, Smart Contract Audits,
+                            Development Best Practices...
+                            <span class="block mt-2 text-xs text-gray-600">// Documenting the journey through the dark
+                                forest of Ethereum</span>
+                        </p>
+
+                        <!-- Search Bar -->
+                        <div class="relative w-full md:w-80 group">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="text-gray-500 font-mono">></span>
+                            </div>
+                            <input type="text"
+                                class="block w-full pl-8 pr-3 py-2 bg-black border border-gray-800 rounded-md text-sm text-gray-300 placeholder-gray-600 focus:outline-none focus:border-[#00ff88] focus:ring-1 focus:ring-[#00ff88] font-mono transition-all"
+                                placeholder="grep -r \" security\" .">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <span class="animate-pulse text-[#00ff88]">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Article -->
+            <section class="px-6 mb-16">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex items-center gap-2 mb-6 font-mono text-xs text-gray-500 uppercase tracking-widest">
+                        <span class="text-[#00ff88]">●</span> Featured_Log
+                    </div>
+
+                    <article
+                        class="relative group rounded-xl overflow-hidden border border-gray-800 bg-[#0a0a0a] hover:border-[#00ff88]/50 transition-all duration-300">
+                        <div class="grid md:grid-cols-5 min-h-[400px]">
+                            <!-- Image/Visual Side -->
+                            <div class="md:col-span-3 relative overflow-hidden bg-gray-900">
+                                <div
+                                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1639322537228-ad7117a394eb?q=80&w=2664&auto=format&fit=crop')] bg-cover bg-center opacity-60 mix-blend-overlay group-hover:opacity-80 transition-opacity duration-500">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent md:bg-gradient-to-l">
+                                </div>
+                                <div class="absolute inset-0 grid-bg opacity-50"></div>
+
+                                <!-- Code Overlay -->
+                                <div
+                                    class="absolute bottom-6 left-6 font-mono text-xs text-[#00ff88]/80 bg-black/80 p-4 rounded border border-[#00ff88]/20 backdrop-blur-sm hidden md:block">
+                                    <div class="opacity-50">// Vulnerability detected</div>
+                                    <div>function withdraw() external {</div>
+                                    <div class="pl-4">uint256 amount = balances[msg.sender];</div>
+                                    <div class="pl-4 text-red-400">require(msg.sender.call{value: amount}(""));</div>
+                                    <div class="pl-4">balances[msg.sender] = 0;</div>
+                                    <div>}</div>
+                                </div>
+                            </div>
+
+                            <!-- Content Side -->
+                            <div
+                                class="md:col-span-2 p-8 md:p-12 flex flex-col justify-center border-t md:border-t-0 md:border-l border-gray-800 relative">
+                                <div
+                                    class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+                                    <iconify-icon icon="lucide:arrow-up-right"
+                                        class="text-4xl text-[#00ff88]"></iconify-icon>
+                                </div>
+
+                                <div class="flex gap-3 mb-6">
+                                    <span
+                                        class="px-2 py-1 bg-[#00ff88]/10 text-[#00ff88] text-xs font-mono rounded border border-[#00ff88]/20">CRITICAL</span>
+                                    <span
+                                        class="px-2 py-1 bg-gray-800 text-gray-400 text-xs font-mono rounded border border-gray-700">AUDIT-2025-001</span>
+                                </div>
+
+                                <h2
+                                    class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight group-hover:text-[#00ff88] transition-colors">
+                                    Reentrancy in 2025: Why It's Still Haunting DeFi Protocols
+                                </h2>
+
+                                <p class="text-gray-400 mb-8 line-clamp-3 leading-relaxed">
+                                    Despite years of tooling and awareness, reentrancy attacks remain a primary vector
+                                    for draining liquidity pools. Analyzing the latest bridge hack reveals how modern
+                                    cross-chain messaging introduces new variant patterns.
+                                </p>
+
+                                <div class="flex items-center justify-between mt-auto pt-6 border-t border-gray-800">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gray-800 overflow-hidden border border-[#00ff88]/30">
+                                            <img src="https://avatars.githubusercontent.com/u/196279479?v=4"
+                                                alt="Author" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="text-xs font-mono text-gray-500">
+                                            <span class="text-white">Mir Mohmmad Luqman</span>
+                                            <span class="block text-gray-600">May 15, 2025</span>
+                                        </div>
+                                    </div>
+                                    <a href="#read-post"
+                                        class="text-sm font-mono text-[#00ff88] hover:underline terminal-cursor">Read_Log()</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Recent Logs Grid -->
+            <section class="px-6 mb-24">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 class="font-mono text-xl font-bold text-white">$ <span class="text-[#00ff88]">ls -la
+                                ./recent_posts</span></h3>
+                        <div class="hidden md:flex text-xs font-mono text-gray-500 gap-4">
+                            <span>drwxr-xr-x</span>
+                            <span>4 files</span>
+                            <span>1024 bytes</span>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Article Card 1 -->
+                        <a href="#article-1"
+                            class="group block bg-[#0a0a0a] border border-gray-800 rounded-lg p-6 hover:border-cyan-400/50 hover:bg-white/5 transition-all duration-300">
+                            <div class="mb-6 h-48 rounded bg-gray-900 overflow-hidden relative">
+                                <div
+                                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1642104704074-907c0698cbd9?q=80&w=2532&auto=format&fit=crop')] bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-700">
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-black/80 backdrop-blur px-2 py-1 rounded border border-gray-700 text-xs font-mono text-cyan-400">
+                                    TUTORIAL</div>
+                            </div>
+                            <div class="font-mono text-xs text-gray-500 mb-2">2025-04-28 10:15 UTC</div>
+                            <h4 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                                Mastering Foundry: Advanced Fuzzing Techniques</h4>
+                            <p class="text-sm text-gray-400 line-clamp-3 mb-4">How to write stateful invariants that
+                                actually catch bugs. Moving beyond simple unit tests to property-based testing in
+                                Solidity.</p>
+                            <div class="flex items-center text-xs font-mono text-cyan-400 gap-2">
+                                <span>Read_More</span>
+                                <iconify-icon icon="lucide:arrow-right"
+                                    class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                            </div>
+                        </a>
+
+                        <!-- Article Card 2 -->
+                        <a href="#article-2"
+                            class="group block bg-[#0a0a0a] border border-gray-800 rounded-lg p-6 hover:border-purple-400/50 hover:bg-white/5 transition-all duration-300">
+                            <div class="mb-6 h-48 rounded bg-gray-900 overflow-hidden relative">
+                                <div
+                                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2565&auto=format&fit=crop')] bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-700">
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-black/80 backdrop-blur px-2 py-1 rounded border border-gray-700 text-xs font-mono text-purple-400">
+                                    RESEARCH</div>
+                            </div>
+                            <div class="font-mono text-xs text-gray-500 mb-2">2025-04-10 14:20 UTC</div>
+                            <h4 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                                Account Abstraction: Security Implications</h4>
+                            <p class="text-sm text-gray-400 line-clamp-3 mb-4">Analyzing the attack surface of ERC-4337
+                                bundlers and paymasters. What happens when the user isn't the msg.sender?</p>
+                            <div class="flex items-center text-xs font-mono text-purple-400 gap-2">
+                                <span>Read_More</span>
+                                <iconify-icon icon="lucide:arrow-right"
+                                    class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                            </div>
+                        </a>
+
+                        <!-- Article Card 3 -->
+                        <a href="#article-3"
+                            class="group block bg-[#0a0a0a] border border-gray-800 rounded-lg p-6 hover:border-yellow-400/50 hover:bg-white/5 transition-all duration-300">
+                            <div class="mb-6 h-48 rounded bg-gray-900 overflow-hidden relative">
+                                <div
+                                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-700">
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-black/80 backdrop-blur px-2 py-1 rounded border border-gray-700 text-xs font-mono text-yellow-400">
+                                    CAREER</div>
+                            </div>
+                            <div class="font-mono text-xs text-gray-500 mb-2">2025-03-22 09:00 UTC</div>
+                            <h4 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                                Breaking into Smart Contract Auditing</h4>
+                            <p class="text-sm text-gray-400 line-clamp-3 mb-4">My roadmap from web2 developer to
+                                securing protocols protecting millions in TVL. Resources, practice sites, and finding
+                                mentors.</p>
+                            <div class="flex items-center text-xs font-mono text-yellow-400 gap-2">
+                                <span>Read_More</span>
+                                <iconify-icon icon="lucide:arrow-right"
+                                    class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tags / Categories -->
+            <section class="px-6 mb-24">
+                <div class="max-w-7xl mx-auto">
+                    <div class="border-t border-b border-gray-800 py-8">
+                        <h3 class="font-mono text-sm font-bold text-gray-500 mb-4">FILTER_BY_TAG:</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <button
+                                class="px-4 py-2 bg-[#00ff88]/10 text-[#00ff88] border border-[#00ff88]/30 rounded font-mono text-sm hover:bg-[#00ff88]/20 transition-colors">#security
+                                (12)</button>
+                            <button
+                                class="px-4 py-2 bg-gray-900 text-gray-400 border border-gray-800 rounded font-mono text-sm hover:text-white hover:border-gray-600 transition-colors">#solidity
+                                (8)</button>
+                            <button
+                                class="px-4 py-2 bg-gray-900 text-gray-400 border border-gray-800 rounded font-mono text-sm hover:text-white hover:border-gray-600 transition-colors">#rust
+                                (5)</button>
+                            <button
+                                class="px-4 py-2 bg-gray-900 text-gray-400 border border-gray-800 rounded font-mono text-sm hover:text-white hover:border-gray-600 transition-colors">#audit-reports
+                                (4)</button>
+                            <button
+                                class="px-4 py-2 bg-gray-900 text-gray-400 border border-gray-800 rounded font-mono text-sm hover:text-white hover:border-gray-600 transition-colors">#mev
+                                (3)</button>
+                            <button
+                                class="px-4 py-2 bg-gray-900 text-gray-400 border border-gray-800 rounded font-mono text-sm hover:text-white hover:border-gray-600 transition-colors">#zk-rollups
+                                (2)</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter / Footer Area -->
+            <footer class="mt-auto border-t border-gray-800 bg-black/40">
+                <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12">
+                    <div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-2 h-2 bg-[#00ff88] rounded-full animate-pulse"></div>
+                            <h3 class="font-mono text-lg font-bold text-white">Subscribe_to_Logs</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 max-w-sm">
+                            Get notified about new vulnerability disclosures and security deep dives. No spam, only
+                            signals.
+                        </p>
+                        <div class="flex gap-2 max-w-sm">
+                            <input type="email" placeholder="email@address.com"
+                                class="bg-black border border-gray-800 rounded px-4 py-2 text-sm text-white focus:border-[#00ff88] focus:outline-none flex-1 font-mono">
+                            <button
+                                class="bg-[#00ff88]/10 text-[#00ff88] border border-[#00ff88]/50 px-4 py-2 rounded text-sm font-mono font-bold hover:bg-[#00ff88] hover:text-black transition-all">
+                                EXECUTE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:items-end justify-between">
+                        <div class="flex gap-6 mb-6">
+                            <a href="https://github.com/mirmohmmadluqman" target="_blank"
+                                class="text-gray-500 hover:text-[#00ff88] transition-colors">
+                                <iconify-icon icon="mdi:github" class="text-2xl"></iconify-icon>
+                            </a>
+                            <a href="https://x.com/mirmohmmadluqman" target="_blank"
+                                class="text-gray-500 hover:text-[#00ff88] transition-colors">
+                                <iconify-icon icon="ri:twitter-x-fill" class="text-2xl"></iconify-icon>
+                            </a>
+                            <a href="https://linkedin.com/in/mirmohmmadluqman" target="_blank"
+                                class="text-gray-500 hover:text-[#00ff88] transition-colors">
+                                <iconify-icon icon="mdi:linkedin" class="text-2xl"></iconify-icon>
+                            </a>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-600 font-mono">© 2025 Mir Mohmmad Luqman.</p>
+                            <p class="text-xs text-gray-700 font-mono">System Status: <span
+                                    class="text-[#00ff88]">ONLINE</span></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- Floating contact button -->
+        <a href="06-contact-services.html" class="floating-contact-button" id="floating-contact-button">
+            <iconify-icon icon="lucide:message-square" class="mr-2"></iconify-icon>
+            <span>Contact Me</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>
