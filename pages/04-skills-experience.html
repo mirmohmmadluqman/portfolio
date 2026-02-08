@@ -12,8 +12,10 @@
         href="https://api.fontshare.com/v2/css?f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap"
         rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="../public/favicon.png">
+
     <!-- Prefetch Links for Navigation Performance -->
-    <link rel="prefetch" href="index.html" as="document">
+    <link rel="prefetch" href="../index.html" as="document">
     <link rel="prefetch" href="02-about-page.html" as="document">
     <link rel="prefetch" href="03-projects-gallery.html" as="document">
     <link rel="prefetch" href="05-blog-insights.html" as="document">
@@ -196,14 +198,14 @@
         <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20"
             style="view-transition-name: main-nav">
             <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                <a id="nav-logo" href="index.html" class="font-mono text-xl font-bold flex items-center gap-2 group">
+                <a id="nav-logo" href="../index.html" class="font-mono text-xl font-bold flex items-center gap-2 group">
                     <span class="text-gray-500">~/</span>
                     <span class="text-white group-hover:text-[#00ff88] transition-colors">portfolio</span>
                     <span class="w-2 h-4 bg-[#00ff88] animate-pulse"></span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a id="nav-home" href="index.html"
+                    <a id="nav-home" href="../index.html"
                         class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
                         <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span
                             class="bracket text-[#00ff88] translate-x-2">]</span>
@@ -514,19 +516,35 @@
                             </p>
                         </div>
 
-                        <!-- Item 4: Pre-2024 -->
+                        <!-- Item 4: 2023 -->
                         <div class="relative pl-8 md:pl-12">
                             <div
                                 class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-600 border border-gray-400">
                             </div>
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                                <span class="font-mono text-gray-500 text-sm">Pre-2024</span>
+                                <span class="font-mono text-gray-500 text-sm">2023</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Blockchain Learner</h3>
+                            <div class="text-sm text-gray-400 font-mono mb-4">Transition to Web3</div>
+                            <p class="text-gray-300 max-w-2xl leading-relaxed">
+                                Pivoted focus to blockchain technology. Started learning EVM architecture, Solidity, and
+                                decentralized systems fundamentals.
+                            </p>
+                        </div>
+
+                        <!-- Item 5: 2022 -->
+                        <div class="relative pl-8 md:pl-12">
+                            <div
+                                class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-600 border border-gray-400">
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
+                                <span class="font-mono text-gray-500 text-sm">2022</span>
                             </div>
                             <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Web Developer & Gamer</h3>
-                            <div class="text-sm text-gray-400 font-mono mb-4">Early Days</div>
+                            <div class="text-sm text-gray-400 font-mono mb-4">Exploration Phase</div>
                             <p class="text-gray-300 max-w-2xl leading-relaxed">
-                                Passionate gamer turned developer. Built web applications and explored programming
-                                fundamentals before discovering the world of decentralized technology.
+                                Active web developer and competitive gamer. Briefly explored machine learning and Python
+                                before focusing on web technologies.
                             </p>
                         </div>
                     </div>
@@ -553,10 +571,11 @@
         </main>
     </div>
     </div>
+    </div>
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/enhancements.js"></script>
-    <script src="js/search.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 
 </html>

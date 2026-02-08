@@ -11,12 +11,14 @@
         href="https://api.fontshare.com/v2/css?f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap"
         rel="stylesheet">
     <meta name="view-transition" content="same-origin">
-    <!-- Prefetch flow pages -->
-    <link rel="prefetch" href="02-about-page.html" as="document">
-    <link rel="prefetch" href="03-projects-gallery.html" as="document">
-    <link rel="prefetch" href="04-skills-experience.html" as="document">
-    <link rel="prefetch" href="05-blog-insights.html" as="document">
-    <link rel="prefetch" href="06-contact-services.html" as="document">
+    <link rel="icon" type="image/png" href="public/favicon.png">
+
+    <!-- Prefetch Links -->
+    <link rel="prefetch" href="pages/02-about-page.html" as="document">
+    <link rel="prefetch" href="pages/03-projects-gallery.html" as="document">
+    <link rel="prefetch" href="pages/04-skills-experience.html" as="document">
+    <link rel="prefetch" href="pages/05-blog-insights.html" as="document">
+    <link rel="prefetch" href="pages/06-contact-services.html" as="document">
     <style>
         :root {
             --neon-green: #00ff88;
@@ -202,32 +204,31 @@
                 </a>
 
                 <div class="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a id="nav-home" href="index.html"
-                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                    <a id="nav-home" href="index.html" class="nav-item active text-[#00ff88] flex items-center gap-1">
                         <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span
                             class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-about" href="02-about-page.html"
+                    <a id="nav-about" href="pages/02-about-page.html"
                         class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
                         <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span
                             class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-skills" href="04-skills-experience.html"
+                    <a id="nav-skills" href="pages/04-skills-experience.html"
                         class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
                         <span class="bracket text-[#00ff88] -translate-x-2">[</span>build<span
                             class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-projects" href="03-projects-gallery.html"
+                    <a id="nav-projects" href="pages/03-projects-gallery.html"
                         class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
                         <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span
                             class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-blog" href="05-blog-insights.html"
+                    <a id="nav-blog" href="pages/05-blog-insights.html"
                         class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
                         <span class="bracket text-[#00ff88] -translate-x-2">[</span>insights<span
                             class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-connect" href="06-contact-services.html"
+                    <a id="nav-connect" href="pages/06-contact-services.html"
                         class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
                         <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span
                             class="bracket text-[#00ff88] translate-x-2">]</span>
