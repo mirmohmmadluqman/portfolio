@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,23 @@
     <title>Contact & Services | Mir Mohmmad Luqman</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://api.fontshare.com/v2/css?f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap"
+        rel="stylesheet">
+
     <!-- Prefetch Links -->
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/00886802-ddc3-4624-9124-6ab0ed1cc011" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/e3c9f6b8-8021-4189-929d-721629cc42c7" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/e2e00d84-3381-45c9-99a5-a01a8497aa31" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/5f581eb8-044d-4fcc-b4ac-f6c81d7f64fe" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" as="document">
+    <link rel="prefetch" href="index.html" as="document">
+    <link rel="prefetch" href="02-about-page.html" as="document">
+    <link rel="prefetch" href="03-projects-gallery.html" as="document">
+    <link rel="prefetch" href="04-skills-experience.html" as="document">
+    <link rel="prefetch" href="05-blog-insights.html" as="document">
 
     <style>
         :root {
             --neon-green: #00ff88;
             --terminal-bg: #0a0a0a;
         }
-        
+
         html {
             background-color: var(--terminal-bg);
         }
@@ -58,13 +60,25 @@
         }
 
         @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
 
         @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
         }
 
         .scanline::before {
@@ -81,8 +95,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
         .animate-float {
@@ -90,7 +111,7 @@
         }
 
         .grid-bg {
-            background-image: 
+            background-image:
                 linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
             background-size: 40px 40px;
@@ -101,7 +122,7 @@
             opacity: 1;
             transform: translateX(0);
         }
-        
+
         .bracket {
             opacity: 0;
             transition: all 0.3s ease;
@@ -127,29 +148,44 @@
         }
 
         @keyframes fade-out {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-10px); }
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
         }
 
         @keyframes fade-in {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Custom Form Styles */
         .input-group {
             position: relative;
         }
-        .input-group input:focus ~ label,
-        .input-group textarea:focus ~ label,
-        .input-group input:not(:placeholder-shown) ~ label,
-        .input-group textarea:not(:placeholder-shown) ~ label {
+
+        .input-group input:focus~label,
+        .input-group textarea:focus~label,
+        .input-group input:not(:placeholder-shown)~label,
+        .input-group textarea:not(:placeholder-shown)~label {
             top: -24px;
             left: 0;
             color: #00ff88;
             font-size: 0.75rem;
         }
-        
+
         input:-webkit-autofill,
         input:-webkit-autofill:hover,
         input:-webkit-autofill:focus,
@@ -160,32 +196,44 @@
         }
     </style>
 </head>
+
 <body>
     <div class="min-h-screen relative grid-bg scanline selection:bg-[#00ff88] selection:text-black">
         <!-- Navigation (Persistent) -->
-        <nav style="view-transition-name: main-nav" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20">
+        <nav style="view-transition-name: main-nav"
+            class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20">
             <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                <a id="nav-logo" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" class="font-mono text-xl font-bold flex items-center gap-2 group">
+                <a id="nav-logo" href="index.html" class="font-mono text-xl font-bold flex items-center gap-2 group">
                     <span class="text-gray-500">~/</span>
                     <span class="text-white group-hover:text-[#00ff88] transition-colors">portfolio</span>
                     <span class="w-2 h-4 bg-[#00ff88] animate-pulse"></span>
                 </a>
-                
+
                 <div class="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a id="nav-home" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-home" href="index.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-whoami" href="https://p.superdesign.dev/draft/00886802-ddc3-4624-9124-6ab0ed1cc011" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-whoami" href="02-about-page.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-build" href="https://p.superdesign.dev/draft/e2e00d84-3381-45c9-99a5-a01a8497aa31" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>build --dapps<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-build" href="04-skills-experience.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>build --dapps<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-projects" href="https://p.superdesign.dev/draft/e3c9f6b8-8021-4189-929d-721629cc42c7" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-projects" href="03-projects-gallery.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-connect" href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" class="nav-item active text-[#00ff88] flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-connect" href="06-contact-services.html"
+                        class="nav-item active text-[#00ff88] flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
                 </div>
             </div>
@@ -193,12 +241,13 @@
 
         <!-- Main Content Area (Dynamic) -->
         <main style="view-transition-name: main-content" class="pt-24 pb-12 min-h-screen">
-            
+
             <!-- Header -->
             <section class="max-w-7xl mx-auto px-6 mb-20">
                 <div class="flex flex-col md:flex-row items-start justify-between gap-8 border-b border-gray-800 pb-12">
                     <div class="max-w-2xl">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/30 text-[#00ff88] text-xs font-mono mb-6">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/30 text-[#00ff88] text-xs font-mono mb-6">
                             <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
                             SYSTEM STATUS: ONLINE
                         </div>
@@ -206,13 +255,15 @@
                             <span class="text-[#00ff88]">Initialize</span> Connection();
                         </h1>
                         <p class="text-xl text-gray-400 font-light leading-relaxed">
-                            Deploying expertise in smart contract security, dApp architecture, and blockchain engineering. Select a protocol below to begin transmission.
+                            Deploying expertise in smart contract security, dApp architecture, and blockchain
+                            engineering. Select a protocol below to begin transmission.
                         </p>
                     </div>
-                    
+
                     <!-- Availability Widget -->
                     <div class="w-full md:w-auto bg-black/50 border border-gray-800 p-6 rounded-xl backdrop-blur-sm">
-                        <h3 class="font-mono text-sm text-gray-500 mb-4 uppercase tracking-wider">Availability Monitor</h3>
+                        <h3 class="font-mono text-sm text-gray-500 mb-4 uppercase tracking-wider">Availability Monitor
+                        </h3>
                         <div class="space-y-3 font-mono text-sm">
                             <div class="flex items-center justify-between gap-8">
                                 <span class="text-white">Audits</span>
@@ -243,37 +294,46 @@
                     <iconify-icon icon="lucide:cpu" class="text-[#00ff88]"></iconify-icon>
                     Active Protocols
                 </h2>
-                
+
                 <div class="grid md:grid-cols-3 gap-6">
                     <!-- Service 1: Audit -->
-                    <div class="group relative p-8 bg-black/40 border border-gray-800 rounded-xl overflow-hidden hover:border-[#00ff88]/50 transition-all hover:-translate-y-1">
+                    <div
+                        class="group relative p-8 bg-black/40 border border-gray-800 rounded-xl overflow-hidden hover:border-[#00ff88]/50 transition-all hover:-translate-y-1">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <iconify-icon icon="lucide:shield-check" class="text-9xl text-[#00ff88]"></iconify-icon>
                         </div>
-                        
+
                         <div class="relative z-10">
-                            <div class="w-12 h-12 bg-[#00ff88]/10 rounded-lg flex items-center justify-center border border-[#00ff88]/20 mb-6 group-hover:shadow-[0_0_15px_rgba(0,255,136,0.2)] transition-shadow">
+                            <div
+                                class="w-12 h-12 bg-[#00ff88]/10 rounded-lg flex items-center justify-center border border-[#00ff88]/20 mb-6 group-hover:shadow-[0_0_15px_rgba(0,255,136,0.2)] transition-shadow">
                                 <iconify-icon icon="lucide:shield-alert" class="text-2xl text-[#00ff88]"></iconify-icon>
                             </div>
-                            
-                            <h3 class="font-mono text-xl font-bold text-white mb-3 group-hover:text-[#00ff88] transition-colors">Smart Contract Audit</h3>
+
+                            <h3
+                                class="font-mono text-xl font-bold text-white mb-3 group-hover:text-[#00ff88] transition-colors">
+                                Smart Contract Audit</h3>
                             <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Comprehensive security analysis, gas optimization, and logic verification for EVM smart contracts. Includes formal verification and fuzzing.
+                                Comprehensive security analysis, gas optimization, and logic verification for EVM smart
+                                contracts. Includes formal verification and fuzzing.
                             </p>
-                            
+
                             <ul class="space-y-2 mb-8">
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-[#00ff88]"></iconify-icon> Detailed Report
+                                    <iconify-icon icon="lucide:check" class="text-[#00ff88]"></iconify-icon> Detailed
+                                    Report
                                 </li>
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-[#00ff88]"></iconify-icon> Slither/Echidna Tests
+                                    <iconify-icon icon="lucide:check" class="text-[#00ff88]"></iconify-icon>
+                                    Slither/Echidna Tests
                                 </li>
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-[#00ff88]"></iconify-icon> Gas Optimization
+                                    <iconify-icon icon="lucide:check" class="text-[#00ff88]"></iconify-icon> Gas
+                                    Optimization
                                 </li>
                             </ul>
 
-                            <div class="pt-6 border-t border-gray-800/50 flex items-center justify-between font-mono text-sm">
+                            <div
+                                class="pt-6 border-t border-gray-800/50 flex items-center justify-between font-mono text-sm">
                                 <span class="text-gray-500">Starting at</span>
                                 <span class="text-white">$1,500<span class="text-[#00ff88]">/contract</span></span>
                             </div>
@@ -281,34 +341,43 @@
                     </div>
 
                     <!-- Service 2: Dev -->
-                    <div class="group relative p-8 bg-black/40 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all hover:-translate-y-1">
+                    <div
+                        class="group relative p-8 bg-black/40 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all hover:-translate-y-1">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <iconify-icon icon="lucide:code-2" class="text-9xl text-cyan-400"></iconify-icon>
                         </div>
-                        
+
                         <div class="relative z-10">
-                            <div class="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center border border-cyan-400/20 mb-6 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-shadow">
+                            <div
+                                class="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center border border-cyan-400/20 mb-6 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-shadow">
                                 <iconify-icon icon="lucide:layers" class="text-2xl text-cyan-400"></iconify-icon>
                             </div>
-                            
-                            <h3 class="font-mono text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">dApp Development</h3>
+
+                            <h3
+                                class="font-mono text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                                dApp Development</h3>
                             <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Full-stack Web3 development from smart contracts to reactive frontends. Building robust, scalable decentralized applications.
+                                Full-stack Web3 development from smart contracts to reactive frontends. Building robust,
+                                scalable decentralized applications.
                             </p>
-                            
+
                             <ul class="space-y-2 mb-8">
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-cyan-400"></iconify-icon> React/Next.js + Wagmi
+                                    <iconify-icon icon="lucide:check" class="text-cyan-400"></iconify-icon>
+                                    React/Next.js + Wagmi
                                 </li>
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-cyan-400"></iconify-icon> Custom Smart Contracts
+                                    <iconify-icon icon="lucide:check" class="text-cyan-400"></iconify-icon> Custom Smart
+                                    Contracts
                                 </li>
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-cyan-400"></iconify-icon> Indexing & API Integration
+                                    <iconify-icon icon="lucide:check" class="text-cyan-400"></iconify-icon> Indexing &
+                                    API Integration
                                 </li>
                             </ul>
 
-                            <div class="pt-6 border-t border-gray-800/50 flex items-center justify-between font-mono text-sm">
+                            <div
+                                class="pt-6 border-t border-gray-800/50 flex items-center justify-between font-mono text-sm">
                                 <span class="text-gray-500">Rate</span>
                                 <span class="text-white">$85<span class="text-cyan-400">/hour</span></span>
                             </div>
@@ -316,34 +385,43 @@
                     </div>
 
                     <!-- Service 3: Security Research -->
-                    <div class="group relative p-8 bg-black/40 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all hover:-translate-y-1">
+                    <div
+                        class="group relative p-8 bg-black/40 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all hover:-translate-y-1">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <iconify-icon icon="lucide:search" class="text-9xl text-purple-500"></iconify-icon>
                         </div>
-                        
+
                         <div class="relative z-10">
-                            <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center border border-purple-500/20 mb-6 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-shadow">
+                            <div
+                                class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center border border-purple-500/20 mb-6 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.2)] transition-shadow">
                                 <iconify-icon icon="lucide:file-search" class="text-2xl text-purple-500"></iconify-icon>
                             </div>
-                            
-                            <h3 class="font-mono text-xl font-bold text-white mb-3 group-hover:text-purple-500 transition-colors">Security Research</h3>
+
+                            <h3
+                                class="font-mono text-xl font-bold text-white mb-3 group-hover:text-purple-500 transition-colors">
+                                Security Research</h3>
                             <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Deep dive into protocol architecture, economic attack vectors, and novel vulnerability research for DeFi protocols.
+                                Deep dive into protocol architecture, economic attack vectors, and novel vulnerability
+                                research for DeFi protocols.
                             </p>
-                            
+
                             <ul class="space-y-2 mb-8">
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-purple-500"></iconify-icon> Architecture Review
+                                    <iconify-icon icon="lucide:check" class="text-purple-500"></iconify-icon>
+                                    Architecture Review
                                 </li>
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-purple-500"></iconify-icon> Economic Threat Modeling
+                                    <iconify-icon icon="lucide:check" class="text-purple-500"></iconify-icon> Economic
+                                    Threat Modeling
                                 </li>
                                 <li class="flex items-center gap-2 text-xs text-gray-500 font-mono">
-                                    <iconify-icon icon="lucide:check" class="text-purple-500"></iconify-icon> Private Consultation
+                                    <iconify-icon icon="lucide:check" class="text-purple-500"></iconify-icon> Private
+                                    Consultation
                                 </li>
                             </ul>
 
-                            <div class="pt-6 border-t border-gray-800/50 flex items-center justify-between font-mono text-sm">
+                            <div
+                                class="pt-6 border-t border-gray-800/50 flex items-center justify-between font-mono text-sm">
                                 <span class="text-gray-500">Project Based</span>
                                 <span class="text-white">Custom<span class="text-purple-500"> Quote</span></span>
                             </div>
@@ -357,7 +435,9 @@
                 <div class="grid lg:grid-cols-2 gap-12 items-start">
                     <!-- Form Terminal -->
                     <div class="relative">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-[#00ff88]/30 to-cyan-400/30 rounded-lg blur opacity-30"></div>
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-[#00ff88]/30 to-cyan-400/30 rounded-lg blur opacity-30">
+                        </div>
                         <div class="relative bg-[#0a0a0a] border border-[#00ff88]/30 rounded-lg overflow-hidden">
                             <!-- Terminal Header -->
                             <div class="bg-[#00ff88]/5 px-4 py-2 border-b border-[#00ff88]/20 flex items-center gap-2">
@@ -372,37 +452,52 @@
                                 <form class="space-y-8">
                                     <div class="grid md:grid-cols-2 gap-8">
                                         <div class="input-group">
-                                            <input type="text" id="name" placeholder=" " class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors">
-                                            <label for="name" class="absolute left-0 top-2 text-gray-500 font-mono text-sm transition-all pointer-events-none">> enter_name</label>
+                                            <input type="text" id="name" placeholder=" "
+                                                class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors">
+                                            <label for="name"
+                                                class="absolute left-0 top-2 text-gray-500 font-mono text-sm transition-all pointer-events-none">>
+                                                enter_name</label>
                                         </div>
                                         <div class="input-group">
-                                            <input type="email" id="email" placeholder=" " class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors">
-                                            <label for="email" class="absolute left-0 top-2 text-gray-500 font-mono text-sm transition-all pointer-events-none">> enter_email</label>
+                                            <input type="email" id="email" placeholder=" "
+                                                class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors">
+                                            <label for="email"
+                                                class="absolute left-0 top-2 text-gray-500 font-mono text-sm transition-all pointer-events-none">>
+                                                enter_email</label>
                                         </div>
                                     </div>
 
                                     <div class="input-group">
-                                        <select id="service" class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors appearance-none">
+                                        <select id="service"
+                                            class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors appearance-none">
                                             <option value="" class="bg-black text-gray-500">select_protocol...</option>
                                             <option value="audit" class="bg-black">Smart Contract Audit</option>
                                             <option value="dev" class="bg-black">dApp Development</option>
                                             <option value="research" class="bg-black">Security Research</option>
                                             <option value="other" class="bg-black">Other Inquiry</option>
                                         </select>
-                                        <label for="service" class="absolute left-0 -top-6 text-[#00ff88] font-mono text-xs">> select_service</label>
+                                        <label for="service"
+                                            class="absolute left-0 -top-6 text-[#00ff88] font-mono text-xs">>
+                                            select_service</label>
                                         <div class="absolute right-0 top-3 pointer-events-none text-gray-500">
                                             <iconify-icon icon="lucide:chevron-down"></iconify-icon>
                                         </div>
                                     </div>
 
                                     <div class="input-group">
-                                        <textarea id="message" rows="4" placeholder=" " class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors resize-none"></textarea>
-                                        <label for="message" class="absolute left-0 top-2 text-gray-500 font-mono text-sm transition-all pointer-events-none">> enter_message_data</label>
+                                        <textarea id="message" rows="4" placeholder=" "
+                                            class="w-full bg-transparent border-b border-gray-800 py-2 font-mono text-white focus:outline-none focus:border-[#00ff88] transition-colors resize-none"></textarea>
+                                        <label for="message"
+                                            class="absolute left-0 top-2 text-gray-500 font-mono text-sm transition-all pointer-events-none">>
+                                            enter_message_data</label>
                                     </div>
 
-                                    <button type="submit" class="group w-full py-4 bg-[#00ff88]/10 border border-[#00ff88]/50 hover:bg-[#00ff88] hover:text-black rounded-lg transition-all flex items-center justify-center gap-3">
-                                        <span class="font-mono font-bold group-hover:text-black text-[#00ff88]">EXECUTE_TRANSMISSION()</span>
-                                        <iconify-icon icon="lucide:send" class="text-[#00ff88] group-hover:text-black group-hover:translate-x-1 transition-transform"></iconify-icon>
+                                    <button type="submit"
+                                        class="group w-full py-4 bg-[#00ff88]/10 border border-[#00ff88]/50 hover:bg-[#00ff88] hover:text-black rounded-lg transition-all flex items-center justify-center gap-3">
+                                        <span
+                                            class="font-mono font-bold group-hover:text-black text-[#00ff88]">EXECUTE_TRANSMISSION()</span>
+                                        <iconify-icon icon="lucide:send"
+                                            class="text-[#00ff88] group-hover:text-black group-hover:translate-x-1 transition-transform"></iconify-icon>
                                     </button>
                                 </form>
                             </div>
@@ -416,33 +511,43 @@
                                 <span class="text-[#00ff88]">></span> Direct Uplinks
                             </h3>
                             <div class="space-y-4">
-                                <a href="mailto:luqman@example.com" class="flex items-center gap-4 p-4 bg-white/5 border border-gray-800 rounded-lg hover:border-[#00ff88] group transition-all">
-                                    <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-gray-700 group-hover:border-[#00ff88] group-hover:text-[#00ff88]">
+                                <a href="mailto:mirmohmmadluqman@proton.me"
+                                    class="flex items-center gap-4 p-4 bg-white/5 border border-gray-800 rounded-lg hover:border-[#00ff88] group transition-all">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-gray-700 group-hover:border-[#00ff88] group-hover:text-[#00ff88]">
                                         <iconify-icon icon="lucide:mail"></iconify-icon>
                                     </div>
                                     <div>
                                         <div class="text-xs text-gray-500 font-mono mb-1">Email Channel</div>
-                                        <div class="text-white font-mono group-hover:text-[#00ff88]">luqman@example.com</div>
+                                        <div class="text-white font-mono group-hover:text-[#00ff88]">
+                                            mirmohmmadluqman@proton.me
+                                        </div>
                                     </div>
                                 </a>
-                                
-                                <a href="https://x.com/mirmohmmadluqman" target="_blank" class="flex items-center gap-4 p-4 bg-white/5 border border-gray-800 rounded-lg hover:border-[#00ff88] group transition-all">
-                                    <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-gray-700 group-hover:border-[#00ff88] group-hover:text-[#00ff88]">
+
+                                <a href="https://x.com/mirmohmadluqman" target="_blank"
+                                    class="flex items-center gap-4 p-4 bg-white/5 border border-gray-800 rounded-lg hover:border-[#00ff88] group transition-all">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-gray-700 group-hover:border-[#00ff88] group-hover:text-[#00ff88]">
                                         <iconify-icon icon="ri:twitter-x-fill"></iconify-icon>
                                     </div>
                                     <div>
                                         <div class="text-xs text-gray-500 font-mono mb-1">Encrypted DMs</div>
-                                        <div class="text-white font-mono group-hover:text-[#00ff88]">@mirmohmmadluqman</div>
+                                        <div class="text-white font-mono group-hover:text-[#00ff88]">@mirmohmadluqman
+                                        </div>
                                     </div>
                                 </a>
 
-                                <a href="https://github.com/mirmohmmadluqman" target="_blank" class="flex items-center gap-4 p-4 bg-white/5 border border-gray-800 rounded-lg hover:border-[#00ff88] group transition-all">
-                                    <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-gray-700 group-hover:border-[#00ff88] group-hover:text-[#00ff88]">
+                                <a href="https://github.com/mirmohmmadluqman" target="_blank"
+                                    class="flex items-center gap-4 p-4 bg-white/5 border border-gray-800 rounded-lg hover:border-[#00ff88] group transition-all">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-gray-700 group-hover:border-[#00ff88] group-hover:text-[#00ff88]">
                                         <iconify-icon icon="mdi:github"></iconify-icon>
                                     </div>
                                     <div>
                                         <div class="text-xs text-gray-500 font-mono mb-1">Code Repository</div>
-                                        <div class="text-white font-mono group-hover:text-[#00ff88]">github.com/mirmohmmadluqman</div>
+                                        <div class="text-white font-mono group-hover:text-[#00ff88]">
+                                            github.com/mirmohmmadluqman</div>
                                     </div>
                                 </a>
                             </div>
@@ -453,8 +558,10 @@
                             <h3 class="font-mono text-white font-bold mb-4 flex items-center gap-2">
                                 <span class="text-[#00ff88]">></span> PGP Public Key
                             </h3>
-                            <div class="bg-black border border-gray-800 rounded p-4 font-mono text-xs text-gray-500 break-all relative group cursor-pointer hover:border-gray-600">
-                                <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity text-[#00ff88]">
+                            <div
+                                class="bg-black border border-gray-800 rounded p-4 font-mono text-xs text-gray-500 break-all relative group cursor-pointer hover:border-gray-600">
+                                <div
+                                    class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity text-[#00ff88]">
                                     <iconify-icon icon="lucide:copy"></iconify-icon>
                                 </div>
                                 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -471,14 +578,23 @@
             </section>
 
             <!-- Bottom Footer Info -->
-            <div class="max-w-7xl mx-auto px-6 mt-24 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div
+                class="max-w-7xl mx-auto px-6 mt-24 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
                 <p class="text-xs text-gray-600 font-mono">© 2025 Mir Mohmmad Luqman. All systems operational.</p>
                 <div class="flex items-center gap-6">
-                    <a href="#" class="text-xs text-gray-600 hover:text-[#00ff88] font-mono transition-colors">Privacy_Policy.md</a>
-                    <a href="#" class="text-xs text-gray-600 hover:text-[#00ff88] font-mono transition-colors">Terms_of_Service.md</a>
+                    <a href="#"
+                        class="text-xs text-gray-600 hover:text-[#00ff88] font-mono transition-colors">Privacy_Policy.md</a>
+                    <a href="#"
+                        class="text-xs text-gray-600 hover:text-[#00ff88] font-mono transition-colors">Terms_of_Service.md</a>
                 </div>
             </div>
         </main>
     </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/enhancements.js"></script>
+    <script src="js/search.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,20 @@
     <meta name="view-transition" content="same-origin">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/00886802-ddc3-4624-9124-6ab0ed1cc011" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/e3c9f6b8-8021-4189-929d-721629cc42c7" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/e2e00d84-3381-45c9-99a5-a01a8497aa31" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/5f581eb8-044d-4fcc-b4ac-f6c81d7f64fe" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" as="document">
+    <link
+        href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap"
+        rel="stylesheet">
+    <link rel="prefetch" href="index.html" as="document">
+    <link rel="prefetch" href="03-projects-gallery.html" as="document">
+    <link rel="prefetch" href="04-skills-experience.html" as="document">
+    <link rel="prefetch" href="05-blog-insights.html" as="document">
+    <link rel="prefetch" href="06-contact-services.html" as="document">
     <style>
         :root {
             --neon-green: #00ff88;
             --terminal-bg: #0a0a0a;
         }
-        
+
         body {
             font-family: 'Satoshi', sans-serif;
             background-color: var(--terminal-bg);
@@ -53,6 +55,7 @@
         @view-transition {
             navigation: auto;
         }
+
         ::view-transition {
             background-color: #0a0a0a;
         }
@@ -68,17 +71,33 @@
         ::view-transition-old(main-content) {
             animation: 0.25s ease-out both fade-out;
         }
+
         ::view-transition-new(main-content) {
             animation: 0.25s ease-in 0.1s both fade-in;
         }
 
         @keyframes fade-out {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-10px); }
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
         }
+
         @keyframes fade-in {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Aesthetic Utilities */
@@ -96,12 +115,17 @@
         }
 
         @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
         }
 
         .grid-bg {
-            background-image: 
+            background-image:
                 linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
             background-size: 40px 40px;
@@ -112,7 +136,7 @@
             opacity: 1;
             transform: translateX(0);
         }
-        
+
         .bracket {
             opacity: 0;
             transition: all 0.3s ease;
@@ -139,32 +163,49 @@
         }
     </style>
 </head>
+
 <body>
     <div class="min-h-screen relative grid-bg scanline selection:bg-[#00ff88] selection:text-black flex flex-col">
         <!-- Navigation (Persistent) -->
-        <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20" style="view-transition-name: main-nav">
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20"
+            style="view-transition-name: main-nav">
             <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                <a id="nav-logo" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" class="font-mono text-xl font-bold flex items-center gap-2 group">
+                <a id="nav-logo" href="index.html" class="font-mono text-xl font-bold flex items-center gap-2 group">
                     <span class="text-gray-500">~/</span>
                     <span class="text-white group-hover:text-[#00ff88] transition-colors">portfolio</span>
                     <span class="w-2 h-4 bg-[#00ff88] animate-pulse"></span>
                 </a>
-                
+
                 <div class="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a id="nav-home" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-home" href="index.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-whoami" href="https://p.superdesign.dev/draft/00886802-ddc3-4624-9124-6ab0ed1cc011" class="nav-item active text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-whoami" href="02-about-page.html"
+                        class="nav-item active text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-build" href="https://p.superdesign.dev/draft/e2e00d84-3381-45c9-99a5-a01a8497aa31" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>build --dapps<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-build" href="04-skills-experience.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>build --dapps<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-projects" href="https://p.superdesign.dev/draft/e3c9f6b8-8021-4189-929d-721629cc42c7" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-projects" href="03-projects-gallery.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-connect" href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-insights" href="05-blog-insights.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>insights<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
+                    </a>
+                    <a id="nav-connect" href="06-contact-services.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
                 </div>
             </div>
@@ -177,11 +218,13 @@
                 <header class="mb-20">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="font-mono text-[#00ff88]">$</span>
-                        <h1 class="font-cabinet text-4xl md:text-6xl font-bold text-white tracking-tight">System Profile</h1>
+                        <h1 class="font-cabinet text-4xl md:text-6xl font-bold text-white tracking-tight">System Profile
+                        </h1>
                         <span class="w-3 h-8 md:h-12 bg-[#00ff88] animate-pulse ml-2"></span>
                     </div>
                     <p class="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed">
-                        Unpacking the source code behind the developer. Exploring the intersection of cryptographic security and decentralized architecture.
+                        Unpacking the source code behind the developer. Exploring the intersection of cryptographic
+                        security and decentralized architecture.
                     </p>
                 </header>
 
@@ -191,24 +234,31 @@
                     <div class="lg:col-span-5 relative group">
                         <div class="relative z-10 overflow-hidden rounded-sm border border-[#00ff88]/30 bg-black">
                             <div class="absolute inset-0 bg-[#00ff88]/10 mix-blend-overlay"></div>
-                            <img src="https://avatars.githubusercontent.com/u/196279479?v=4" alt="Profile" class="w-full aspect-[4/5] object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700">
-                            
+                            <img src="https://avatars.githubusercontent.com/u/196279479?v=4" alt="Profile"
+                                class="w-full aspect-[4/5] object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700">
+
                             <!-- Tech Overlay -->
-                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
                                 <div class="font-mono text-xs text-[#00ff88] mb-1">ID: MIR_LUQMAN</div>
                                 <div class="font-mono text-xs text-gray-400">STATUS: ONLINE</div>
                             </div>
                         </div>
-                        
+
                         <!-- Decorative Elements -->
-                        <div class="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-[#00ff88] opacity-50"></div>
-                        <div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-[#00ff88] opacity-50"></div>
+                        <div
+                            class="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-[#00ff88] opacity-50">
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-[#00ff88] opacity-50">
+                        </div>
                     </div>
 
                     <!-- Terminal Bio -->
                     <div class="lg:col-span-7 space-y-8">
                         <div class="terminal-box rounded-lg overflow-hidden">
-                            <div class="bg-[#1a1a1a] px-4 py-3 border-b border-[#00ff88]/20 flex items-center justify-between">
+                            <div
+                                class="bg-[#1a1a1a] px-4 py-3 border-b border-[#00ff88]/20 flex items-center justify-between">
                                 <div class="flex gap-2">
                                     <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
                                     <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
@@ -219,29 +269,40 @@
                             <div class="p-6 font-mono text-sm leading-relaxed text-gray-300">
                                 <p class="mb-4">
                                     <span class="text-[#00ff88]"># Professional Summary</span><br><br>
-                                    I am a <span class="text-white font-bold">Web3 Security Researcher</span> and <span class="text-white font-bold">Smart Contract Developer</span> obsessed with the mathematical purity of blockchain protocols. My journey began not in a classroom, but in the trenches of DeFi summer, dissecting transaction traces and analyzing bytecode.
+                                    I am a <span class="text-white font-bold">Web3 Security Researcher</span> and <span
+                                        class="text-white font-bold">Smart Contract Developer</span> obsessed with the
+                                    mathematical purity of blockchain protocols. My journey began not in a classroom,
+                                    but in the trenches of DeFi summer, dissecting transaction traces and analyzing
+                                    bytecode.
                                 </p>
                                 <p class="mb-4">
-                                    Currently focused on <span class="text-cyan-400">EVM</span> and <span class="text-purple-400">SVM</span> ecosystems, I bridge the critical gap between "it works" and "it's secure". I don't just write code; I challenge it.
+                                    Currently focused on <span class="text-cyan-400">EVM</span> and <span
+                                        class="text-purple-400">SVM</span> ecosystems, I bridge the critical gap between
+                                    "it works" and "it's secure". I don't just write code; I challenge it.
                                 </p>
                                 <p>
                                     <span class="text-gray-500">// Current Objective:</span><br>
-                                    <span class="text-yellow-300">"To build decentralized systems that are resilient enough to survive the dark forest of MEV bots and state-sponsored actors."</span>
+                                    <span class="text-yellow-300">"To build decentralized systems that are resilient
+                                        enough to survive the dark forest of MEV bots and state-sponsored
+                                        actors."</span>
                                 </p>
                             </div>
                         </div>
 
                         <!-- Mission Stats -->
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="p-4 border border-gray-800 bg-white/5 rounded hover:border-[#00ff88]/40 transition-colors">
+                            <div
+                                class="p-4 border border-gray-800 bg-white/5 rounded hover:border-[#00ff88]/40 transition-colors">
                                 <div class="text-[#00ff88] font-mono text-xs mb-2">[SECURITY_FOCUS]</div>
                                 <div class="text-white font-bold">Smart Contract Auditing</div>
                             </div>
-                            <div class="p-4 border border-gray-800 bg-white/5 rounded hover:border-cyan-400/40 transition-colors">
+                            <div
+                                class="p-4 border border-gray-800 bg-white/5 rounded hover:border-cyan-400/40 transition-colors">
                                 <div class="text-cyan-400 font-mono text-xs mb-2">[ARCHITECTURE]</div>
                                 <div class="text-white font-bold">Protocol Design</div>
                             </div>
-                            <div class="p-4 border border-gray-800 bg-white/5 rounded hover:border-purple-400/40 transition-colors">
+                            <div
+                                class="p-4 border border-gray-800 bg-white/5 rounded hover:border-purple-400/40 transition-colors">
                                 <div class="text-purple-400 font-mono text-xs mb-2">[OPTIMIZATION]</div>
                                 <div class="text-white font-bold">Gas Golfing</div>
                             </div>
@@ -263,12 +324,19 @@
                         <!-- Item 1 -->
                         <div class="relative grid md:grid-cols-2 gap-8 mb-12 items-center">
                             <div class="md:text-right order-2 md:order-1">
-                                <span class="inline-block font-mono text-xs text-[#00ff88] bg-[#00ff88]/10 px-2 py-1 rounded mb-2">2024 - Present</span>
+                                <span
+                                    class="inline-block font-mono text-xs text-[#00ff88] bg-[#00ff88]/10 px-2 py-1 rounded mb-2">2024
+                                    - Present</span>
                                 <h3 class="text-xl font-bold text-white mb-2">Independent Security Researcher</h3>
-                                <p class="text-gray-400 text-sm">Specializing in invariant testing and fuzzing with Echidna and Foundry. Contributing to securing major DeFi protocols.</p>
+                                <p class="text-gray-400 text-sm">Specializing in invariant testing and fuzzing with
+                                    Echidna and Foundry. Contributing to securing major DeFi protocols.</p>
                             </div>
-                            <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#00ff88] rounded-full border-4 border-black z-10 shadow-[0_0_10px_#00ff88]"></div>
-                            <div class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-[#00ff88] rounded-full border-2 border-black z-10"></div>
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#00ff88] rounded-full border-4 border-black z-10 shadow-[0_0_10px_#00ff88]">
+                            </div>
+                            <div
+                                class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-[#00ff88] rounded-full border-2 border-black z-10">
+                            </div>
                             <div class="order-3 md:order-3 md:col-start-2">
                                 <!-- Spacer for alignment or content -->
                             </div>
@@ -277,12 +345,18 @@
                         <!-- Item 2 -->
                         <div class="relative grid md:grid-cols-2 gap-8 mb-12 items-center">
                             <div class="order-2 md:order-2 md:col-start-2">
-                                <span class="inline-block font-mono text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded mb-2">2023</span>
+                                <span
+                                    class="inline-block font-mono text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded mb-2">2023</span>
                                 <h3 class="text-xl font-bold text-white mb-2">Full Stack Web3 Dev</h3>
-                                <p class="text-gray-400 text-sm">Built end-to-end dApps using React, Wagmi, and Solidity. Mastered the art of connecting clean UI with complex on-chain logic.</p>
+                                <p class="text-gray-400 text-sm">Built end-to-end dApps using React, Wagmi, and
+                                    Solidity. Mastered the art of connecting clean UI with complex on-chain logic.</p>
                             </div>
-                            <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-black z-10 shadow-[0_0_10px_#22d3ee]"></div>
-                            <div class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-cyan-400 rounded-full border-2 border-black z-10"></div>
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-black z-10 shadow-[0_0_10px_#22d3ee]">
+                            </div>
+                            <div
+                                class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-cyan-400 rounded-full border-2 border-black z-10">
+                            </div>
                             <div class="order-3 md:order-1">
                                 <!-- Spacer -->
                             </div>
@@ -291,26 +365,38 @@
                         <!-- Item 3 -->
                         <div class="relative grid md:grid-cols-2 gap-8 mb-12 items-center">
                             <div class="md:text-right order-2 md:order-1">
-                                <span class="inline-block font-mono text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded mb-2">2022</span>
+                                <span
+                                    class="inline-block font-mono text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded mb-2">2022</span>
                                 <h3 class="text-xl font-bold text-white mb-2">Deep Dive into Systems</h3>
-                                <p class="text-gray-400 text-sm">Transitioned from web2 to web3. Learned Rust for Solana development and understood low-level memory management.</p>
+                                <p class="text-gray-400 text-sm">Transitioned from web2 to web3. Learned Rust for Solana
+                                    development and understood low-level memory management.</p>
                             </div>
-                            <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-purple-400 rounded-full border-4 border-black z-10 shadow-[0_0_10px_#c084fc]"></div>
-                            <div class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-purple-400 rounded-full border-2 border-black z-10"></div>
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-purple-400 rounded-full border-4 border-black z-10 shadow-[0_0_10px_#c084fc]">
+                            </div>
+                            <div
+                                class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-purple-400 rounded-full border-2 border-black z-10">
+                            </div>
                             <div class="order-3 md:order-3 md:col-start-2">
                                 <!-- Spacer -->
                             </div>
                         </div>
-                        
+
                         <!-- Item 4 -->
                         <div class="relative grid md:grid-cols-2 gap-8 items-center">
                             <div class="order-2 md:order-2 md:col-start-2">
-                                <span class="inline-block font-mono text-xs text-gray-500 border border-gray-700 px-2 py-1 rounded mb-2">Origin</span>
+                                <span
+                                    class="inline-block font-mono text-xs text-gray-500 border border-gray-700 px-2 py-1 rounded mb-2">Origin</span>
                                 <h3 class="text-xl font-bold text-gray-300 mb-2">Hello World</h3>
-                                <p class="text-gray-500 text-sm">Started coding with a curiosity for how software shapes the world. The rabbit hole led here.</p>
+                                <p class="text-gray-500 text-sm">Started coding with a curiosity for how software shapes
+                                    the world. The rabbit hole led here.</p>
                             </div>
-                            <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-gray-700 rounded-full border-4 border-black z-10"></div>
-                            <div class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-gray-700 rounded-full border-2 border-black z-10"></div>
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-gray-700 rounded-full border-4 border-black z-10">
+                            </div>
+                            <div
+                                class="md:hidden absolute left-[26px] top-0 w-3 h-3 bg-gray-700 rounded-full border-2 border-black z-10">
+                            </div>
                             <div class="order-3 md:order-1">
                                 <!-- Spacer -->
                             </div>
@@ -320,21 +406,25 @@
 
                 <!-- Tech Stack Deep Dive -->
                 <section class="mb-24">
-                     <div class="flex items-center gap-4 mb-12">
+                    <div class="flex items-center gap-4 mb-12">
                         <iconify-icon icon="lucide:database" class="text-3xl text-cyan-400"></iconify-icon>
                         <h2 class="font-mono text-2xl font-bold text-white">$ cat expertise.json</h2>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- EVM Card -->
-                        <div class="group bg-white/5 border border-gray-800 p-8 rounded-xl hover:bg-white/10 transition-all">
+                        <div
+                            class="group bg-white/5 border border-gray-800 p-8 rounded-xl hover:bg-white/10 transition-all">
                             <div class="flex justify-between items-start mb-6">
-                                <iconify-icon icon="simple-icons:ethereum" class="text-4xl text-gray-300 group-hover:text-[#00ff88] transition-colors"></iconify-icon>
-                                <span class="font-mono text-xs text-[#00ff88] border border-[#00ff88]/30 px-2 py-1 rounded bg-[#00ff88]/5">Primary</span>
+                                <iconify-icon icon="simple-icons:ethereum"
+                                    class="text-4xl text-gray-300 group-hover:text-[#00ff88] transition-colors"></iconify-icon>
+                                <span
+                                    class="font-mono text-xs text-[#00ff88] border border-[#00ff88]/30 px-2 py-1 rounded bg-[#00ff88]/5">Primary</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-4">EVM Architecture</h3>
                             <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                                Deep understanding of the Ethereum Virtual Machine. Proficient in storage layout optimization, proxy patterns (Diamond, UUPS), and assembly (Yul) for gas efficiency.
+                                Deep understanding of the Ethereum Virtual Machine. Proficient in storage layout
+                                optimization, proxy patterns (Diamond, UUPS), and assembly (Yul) for gas efficiency.
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-xs text-gray-500 bg-black px-2 py-1 rounded font-mono">Solidity</span>
@@ -344,14 +434,18 @@
                         </div>
 
                         <!-- SVM Card -->
-                        <div class="group bg-white/5 border border-gray-800 p-8 rounded-xl hover:bg-white/10 transition-all">
+                        <div
+                            class="group bg-white/5 border border-gray-800 p-8 rounded-xl hover:bg-white/10 transition-all">
                             <div class="flex justify-between items-start mb-6">
-                                <iconify-icon icon="simple-icons:solana" class="text-4xl text-gray-300 group-hover:text-purple-400 transition-colors"></iconify-icon>
-                                <span class="font-mono text-xs text-purple-400 border border-purple-400/30 px-2 py-1 rounded bg-purple-400/5">Secondary</span>
+                                <iconify-icon icon="simple-icons:solana"
+                                    class="text-4xl text-gray-300 group-hover:text-purple-400 transition-colors"></iconify-icon>
+                                <span
+                                    class="font-mono text-xs text-purple-400 border border-purple-400/30 px-2 py-1 rounded bg-purple-400/5">Secondary</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-4">SVM Architecture</h3>
                             <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                                Competent in Solana's account model and PDAs. Building high-performance programs using Rust and Anchor framework with a focus on CPI security.
+                                Competent in Solana's account model and PDAs. Building high-performance programs using
+                                Rust and Anchor framework with a focus on CPI security.
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-xs text-gray-500 bg-black px-2 py-1 rounded font-mono">Rust</span>
@@ -367,11 +461,14 @@
                     <div class="inline-flex items-center justify-center p-3 rounded-full bg-[#00ff88]/10 mb-8">
                         <iconify-icon icon="lucide:shield-check" class="text-3xl text-[#00ff88]"></iconify-icon>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-cabinet font-bold text-white mb-6">Security is not an aftermarket add-on.</h2>
+                    <h2 class="text-3xl md:text-5xl font-cabinet font-bold text-white mb-6">Security is not an
+                        aftermarket add-on.</h2>
                     <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
-                        It's the foundation of decentralized finance. I help protocols secure their future through rigorous testing and architectural reviews.
+                        It's the foundation of decentralized finance. I help protocols secure their future through
+                        rigorous testing and architectural reviews.
                     </p>
-                    <a href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" class="inline-flex items-center gap-2 bg-[#00ff88] hover:bg-[#00cc6a] text-black font-bold font-mono px-8 py-4 rounded transition-all transform hover:-translate-y-1">
+                    <a href="06-contact-services.html"
+                        class="inline-flex items-center gap-2 bg-[#00ff88] hover:bg-[#00cc6a] text-black font-bold font-mono px-8 py-4 rounded transition-all transform hover:-translate-y-1">
                         <span>Initialize_Audit()</span>
                         <iconify-icon icon="lucide:arrow-right"></iconify-icon>
                     </a>
@@ -386,18 +483,26 @@
                     © 2025 Mir Mohmmad Luqman. <span class="text-[#00ff88]">System Active</span>
                 </div>
                 <div class="flex gap-6">
-                    <a href="https://github.com/mirmohmmadluqman" target="_blank" class="text-gray-600 hover:text-[#00ff88] transition-colors">
+                    <a href="https://github.com/mirmohmmadluqman" target="_blank"
+                        class="text-gray-600 hover:text-[#00ff88] transition-colors">
                         <iconify-icon icon="mdi:github" class="text-lg"></iconify-icon>
                     </a>
-                    <a href="https://x.com/mirmohmmadluqman" target="_blank" class="text-gray-600 hover:text-[#00ff88] transition-colors">
+                    <a href="https://x.com/mirmohmadluqman" target="_blank"
+                        class="text-gray-600 hover:text-[#00ff88] transition-colors">
                         <iconify-icon icon="ri:twitter-x-fill" class="text-lg"></iconify-icon>
                     </a>
-                    <a href="https://linkedin.com/in/mirmohmmadluqman" target="_blank" class="text-gray-600 hover:text-[#00ff88] transition-colors">
+                    <a href="https://linkedin.com/in/mirmohmmadluqman" target="_blank"
+                        class="text-gray-600 hover:text-[#00ff88] transition-colors">
                         <iconify-icon icon="mdi:linkedin" class="text-lg"></iconify-icon>
                     </a>
                 </div>
             </div>
         </footer>
     </div>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/enhancements.js"></script>
+    <script src="js/search.js"></script>
 </body>
+
 </html>

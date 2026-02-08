@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,23 @@
     <meta name="view-transition" content="same-origin">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://api.fontshare.com/v2/css?f[]=jetbrains-mono@400,500,700,800&f[]=satoshi@400,500,700&display=swap"
+        rel="stylesheet">
+
     <!-- Prefetch Links for Navigation Performance -->
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/00886802-ddc3-4624-9124-6ab0ed1cc011" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/e3c9f6b8-8021-4189-929d-721629cc42c7" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/e3c9f6b8-8021-4189-929d-721629cc42c7" as="document">
-    <link rel="prefetch" href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" as="document">
+    <link rel="prefetch" href="index.html" as="document">
+    <link rel="prefetch" href="02-about-page.html" as="document">
+    <link rel="prefetch" href="03-projects-gallery.html" as="document">
+    <link rel="prefetch" href="05-blog-insights.html" as="document">
+    <link rel="prefetch" href="06-contact-services.html" as="document">
 
     <style>
         :root {
             --neon-green: #00ff88;
             --terminal-bg: #0a0a0a;
         }
-        
+
         body {
             font-family: 'Satoshi', sans-serif;
             background-color: var(--terminal-bg);
@@ -53,13 +56,25 @@
         }
 
         @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
 
         @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
         }
 
         .scanline::before {
@@ -76,7 +91,7 @@
         }
 
         .grid-bg {
-            background-image: 
+            background-image:
                 linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
             background-size: 40px 40px;
@@ -86,7 +101,7 @@
             opacity: 1;
             transform: translateX(0);
         }
-        
+
         .bracket {
             opacity: 0;
             transition: all 0.3s ease;
@@ -109,24 +124,26 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             transform: translateX(-100%);
             animation: shimmer 2s infinite;
         }
 
         @keyframes shimmer {
-            100% { transform: translateX(100%); }
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         /* View Transition Styles */
         html {
             background-color: #0a0a0a;
         }
-        
+
         @view-transition {
             navigation: auto;
         }
-        
+
         ::view-transition {
             background-color: #0a0a0a;
         }
@@ -142,46 +159,74 @@
         ::view-transition-old(main-content) {
             animation: 0.25s ease-out both fade-out;
         }
+
         ::view-transition-new(main-content) {
             animation: 0.25s ease-in 0.1s both fade-in;
         }
 
         @keyframes fade-out {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-10px); }
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
         }
+
         @keyframes fade-in {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="min-h-screen relative grid-bg scanline selection:bg-[#00ff88] selection:text-black">
         <!-- Navigation (Persistent) -->
-        <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20" style="view-transition-name: main-nav">
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#00ff88]/20"
+            style="view-transition-name: main-nav">
             <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                <a id="nav-logo" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" class="font-mono text-xl font-bold flex items-center gap-2 group">
+                <a id="nav-logo" href="index.html" class="font-mono text-xl font-bold flex items-center gap-2 group">
                     <span class="text-gray-500">~/</span>
                     <span class="text-white group-hover:text-[#00ff88] transition-colors">portfolio</span>
                     <span class="w-2 h-4 bg-[#00ff88] animate-pulse"></span>
                 </a>
-                
+
                 <div class="hidden md:flex items-center gap-8 font-mono text-sm">
-                    <a id="nav-home" href="https://p.superdesign.dev/draft/6b32f98a-bd94-4c5c-b1e6-e8b7e2d6813c" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-home" href="index.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>home<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-whoami" href="https://p.superdesign.dev/draft/00886802-ddc3-4624-9124-6ab0ed1cc011" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-whoami" href="02-about-page.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>whoami<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-build" href="https://p.superdesign.dev/draft/e2e00d84-3381-45c9-99a5-a01a8497aa31" class="nav-item text-[#00ff88] hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket-active text-[#00ff88]">[</span>build --dapps<span class="bracket-active text-[#00ff88]">]</span>
+                    <a id="nav-build" href="04-skills-experience.html"
+                        class="nav-item text-[#00ff88] hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket-active text-[#00ff88]">[</span>build --dapps<span
+                            class="bracket-active text-[#00ff88]">]</span>
                     </a>
-                    <a id="nav-projects" href="https://p.superdesign.dev/draft/e3c9f6b8-8021-4189-929d-721629cc42c7" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-projects" href="03-projects-gallery.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>projects<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
-                    <a id="nav-connect" href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
-                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span class="bracket text-[#00ff88] translate-x-2">]</span>
+                    <a id="nav-connect" href="06-contact-services.html"
+                        class="nav-item text-gray-400 hover:text-[#00ff88] transition-colors flex items-center gap-1">
+                        <span class="bracket text-[#00ff88] -translate-x-2">[</span>connect<span
+                            class="bracket text-[#00ff88] translate-x-2">]</span>
                     </a>
                 </div>
             </div>
@@ -190,28 +235,32 @@
         <!-- Main Content Area (Dynamic) -->
         <main class="pt-32 pb-24 px-6" style="view-transition-name: main-content">
             <div class="max-w-6xl mx-auto space-y-20">
-                
+
                 <!-- Header Section -->
                 <header class="relative">
-                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#00ff88]/5 rounded-full blur-[50px] pointer-events-none"></div>
+                    <div
+                        class="absolute -top-10 -left-10 w-40 h-40 bg-[#00ff88]/5 rounded-full blur-[50px] pointer-events-none">
+                    </div>
                     <h1 class="font-mono text-4xl md:text-5xl font-bold mb-6 text-white">
-                        <span class="text-[#00ff88]">root@web3</span>:<span class="text-blue-400">~</span>$ 
+                        <span class="text-[#00ff88]">root@web3</span>:<span class="text-blue-400">~</span>$
                         <span class="typewriter">cat skills_breakdown.md</span><span class="animate-pulse">_</span>
                     </h1>
                     <p class="text-gray-400 max-w-2xl text-lg">
-                        Comprehensive breakdown of technical competencies, security tooling proficiency, and development timeline in the decentralized ecosystem.
+                        Comprehensive breakdown of technical competencies, security tooling proficiency, and development
+                        timeline in the decentralized ecosystem.
                     </p>
                 </header>
 
                 <!-- Skills Grid Breakdown -->
                 <div class="grid lg:grid-cols-2 gap-8">
-                    
+
                     <!-- EVM Ecosystem -->
-                    <div class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-[#00ff88]/30 transition-all duration-300 group relative overflow-hidden">
+                    <div
+                        class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-[#00ff88]/30 transition-all duration-300 group relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <iconify-icon icon="mdi:ethereum" class="text-9xl text-[#00ff88]"></iconify-icon>
                         </div>
-                        
+
                         <div class="flex items-center gap-3 mb-8">
                             <iconify-icon icon="lucide:box" class="text-2xl text-[#00ff88]"></iconify-icon>
                             <h2 class="font-mono text-xl font-bold text-white">EVM Ecosystem</h2>
@@ -247,17 +296,21 @@
                                     <div class="h-full bg-[#00ff88] w-[90%] rounded-full progress-bar"></div>
                                 </div>
                             </div>
-                            
+
                             <div class="pt-4 flex flex-wrap gap-2">
-                                <span class="text-xs font-mono border border-[#00ff88]/30 text-[#00ff88] px-2 py-1 rounded bg-[#00ff88]/5">OpenZeppelin</span>
-                                <span class="text-xs font-mono border border-[#00ff88]/30 text-[#00ff88] px-2 py-1 rounded bg-[#00ff88]/5">Ethers.js</span>
-                                <span class="text-xs font-mono border border-[#00ff88]/30 text-[#00ff88] px-2 py-1 rounded bg-[#00ff88]/5">Wagmi</span>
+                                <span
+                                    class="text-xs font-mono border border-[#00ff88]/30 text-[#00ff88] px-2 py-1 rounded bg-[#00ff88]/5">OpenZeppelin</span>
+                                <span
+                                    class="text-xs font-mono border border-[#00ff88]/30 text-[#00ff88] px-2 py-1 rounded bg-[#00ff88]/5">Ethers.js</span>
+                                <span
+                                    class="text-xs font-mono border border-[#00ff88]/30 text-[#00ff88] px-2 py-1 rounded bg-[#00ff88]/5">Wagmi</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Security & Auditing -->
-                    <div class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-red-500/30 transition-all duration-300 group relative overflow-hidden">
+                    <div
+                        class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-red-500/30 transition-all duration-300 group relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <iconify-icon icon="lucide:shield-alert" class="text-9xl text-red-500"></iconify-icon>
                         </div>
@@ -299,15 +352,19 @@
                             </div>
 
                             <div class="pt-4 flex flex-wrap gap-2">
-                                <span class="text-xs font-mono border border-red-500/30 text-red-500 px-2 py-1 rounded bg-red-500/5">Slither</span>
-                                <span class="text-xs font-mono border border-red-500/30 text-red-500 px-2 py-1 rounded bg-red-500/5">Mythril</span>
-                                <span class="text-xs font-mono border border-red-500/30 text-red-500 px-2 py-1 rounded bg-red-500/5">Manticore</span>
+                                <span
+                                    class="text-xs font-mono border border-red-500/30 text-red-500 px-2 py-1 rounded bg-red-500/5">Slither</span>
+                                <span
+                                    class="text-xs font-mono border border-red-500/30 text-red-500 px-2 py-1 rounded bg-red-500/5">Mythril</span>
+                                <span
+                                    class="text-xs font-mono border border-red-500/30 text-red-500 px-2 py-1 rounded bg-red-500/5">Manticore</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- SVM & Rust -->
-                    <div class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300 group relative overflow-hidden">
+                    <div
+                        class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300 group relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <iconify-icon icon="simple-icons:solana" class="text-9xl text-cyan-400"></iconify-icon>
                         </div>
@@ -339,14 +396,18 @@
                             </div>
 
                             <div class="pt-4 flex flex-wrap gap-2">
-                                <span class="text-xs font-mono border border-cyan-400/30 text-cyan-400 px-2 py-1 rounded bg-cyan-400/5">Solana Web3.js</span>
-                                <span class="text-xs font-mono border border-cyan-400/30 text-cyan-400 px-2 py-1 rounded bg-cyan-400/5">Metaplex</span>
+                                <span
+                                    class="text-xs font-mono border border-cyan-400/30 text-cyan-400 px-2 py-1 rounded bg-cyan-400/5">Solana
+                                    Web3.js</span>
+                                <span
+                                    class="text-xs font-mono border border-cyan-400/30 text-cyan-400 px-2 py-1 rounded bg-cyan-400/5">Metaplex</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Core Languages -->
-                    <div class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-300 group relative overflow-hidden">
+                    <div
+                        class="border border-gray-800 bg-black/40 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-300 group relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <iconify-icon icon="lucide:code-2" class="text-9xl text-purple-400"></iconify-icon>
                         </div>
@@ -378,9 +439,12 @@
                             </div>
 
                             <div class="pt-4 flex flex-wrap gap-2">
-                                <span class="text-xs font-mono border border-purple-400/30 text-purple-400 px-2 py-1 rounded bg-purple-400/5">Node.js</span>
-                                <span class="text-xs font-mono border border-purple-400/30 text-purple-400 px-2 py-1 rounded bg-purple-400/5">React/Next.js</span>
-                                <span class="text-xs font-mono border border-purple-400/30 text-purple-400 px-2 py-1 rounded bg-purple-400/5">GraphQL</span>
+                                <span
+                                    class="text-xs font-mono border border-purple-400/30 text-purple-400 px-2 py-1 rounded bg-purple-400/5">Node.js</span>
+                                <span
+                                    class="text-xs font-mono border border-purple-400/30 text-purple-400 px-2 py-1 rounded bg-purple-400/5">React/Next.js</span>
+                                <span
+                                    class="text-xs font-mono border border-purple-400/30 text-purple-400 px-2 py-1 rounded bg-purple-400/5">GraphQL</span>
                             </div>
                         </div>
                     </div>
@@ -393,48 +457,76 @@
                     </h2>
 
                     <div class="relative ml-4 md:ml-12 border-l-2 border-[#00ff88]/20 space-y-16">
-                        <!-- Item 1 -->
+                        <!-- Item 1: 2026 - Present -->
                         <div class="relative pl-8 md:pl-12">
-                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#00ff88] shadow-[0_0_15px_#00ff88]"></div>
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                                <span class="font-mono text-[#00ff88] text-sm bg-[#00ff88]/10 px-2 py-0.5 rounded border border-[#00ff88]/30">Current</span>
-                                <span class="font-mono text-gray-500 text-sm">2024 - Present</span>
+                            <div
+                                class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#00ff88] shadow-[0_0_15px_#00ff88]">
                             </div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Senior Smart Contract Researcher</h3>
-                            <div class="text-sm text-gray-400 font-mono mb-4">@ Stealth DeFi Protocol</div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
+                                <span
+                                    class="font-mono text-[#00ff88] text-sm bg-[#00ff88]/10 px-2 py-0.5 rounded border border-[#00ff88]/30">Current</span>
+                                <span class="font-mono text-gray-500 text-sm">2026 - Present</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Security Researcher</h3>
+                            <div class="text-sm text-gray-400 font-mono mb-4">Independent Researcher</div>
                             <p class="text-gray-300 max-w-2xl leading-relaxed">
-                                Leading the security architecture for a cross-chain lending protocol. Conducting internal audits, implementing formal verification using Certora, and managing bug bounty programs.
+                                Exploring advanced smart contract vulnerabilities and conducting deep security research.
+                                Focusing on zero-knowledge proof circuits and novel attack vectors in DeFi protocols.
                             </p>
                             <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="text-xs text-gray-500 font-mono">#Solidity</span>
-                                <span class="text-xs text-gray-500 font-mono">#Auditing</span>
-                                <span class="text-xs text-gray-500 font-mono">#DeFi</span>
+                                <span class="text-xs text-gray-500 font-mono">#SecurityResearch</span>
+                                <span class="text-xs text-gray-500 font-mono">#ZeroKnowledge</span>
+                                <span class="text-xs text-gray-500 font-mono">#AdvancedAuditing</span>
                             </div>
                         </div>
 
-                        <!-- Item 2 -->
+                        <!-- Item 2: 2025 -->
                         <div class="relative pl-8 md:pl-12">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-600 border border-gray-400 group-hover:bg-[#00ff88]"></div>
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                                <span class="font-mono text-gray-500 text-sm">2022 - 2024</span>
+                            <div
+                                class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-600 border border-gray-400 group-hover:bg-[#00ff88]">
                             </div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Web3 Developer</h3>
-                            <div class="text-sm text-gray-400 font-mono mb-4">@ BlockLab Agency</div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
+                                <span class="font-mono text-gray-500 text-sm">2025</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Web3 Security Learner & Researcher
+                            </h3>
+                            <div class="text-sm text-gray-400 font-mono mb-4">Self-Directed Learning</div>
                             <p class="text-gray-300 max-w-2xl leading-relaxed">
-                                Developed and deployed 15+ production smart contracts for NFT marketplaces, DAOs, and staking platforms. Optimized gas usage by an average of 30% across projects.
+                                Dedicated year to mastering smart contract security. Studied formal verification,
+                                fuzzing with Echidna, and participated in competitive audits. Transitioned from
+                                development to security focus.
                             </p>
                         </div>
 
-                        <!-- Item 3 -->
+                        <!-- Item 3: 2024 -->
                         <div class="relative pl-8 md:pl-12">
-                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-600 border border-gray-400"></div>
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                                <span class="font-mono text-gray-500 text-sm">2020 - 2022</span>
+                            <div
+                                class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-600 border border-gray-400">
                             </div>
-                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Full Stack Engineer</h3>
-                            <div class="text-sm text-gray-400 font-mono mb-4">@ TechFin Solutions</div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
+                                <span class="font-mono text-gray-500 text-sm">2024</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Web3 Developer</h3>
+                            <div class="text-sm text-gray-400 font-mono mb-4">Freelance & Projects</div>
                             <p class="text-gray-300 max-w-2xl leading-relaxed">
-                                Built high-performance fintech applications using React and Node.js. Transitioned into blockchain development by leading the integration of crypto-payments gateway.
+                                Started journey into Web3 development. Built decentralized applications, wrote smart
+                                contracts in Solidity, and explored different blockchain ecosystems.
+                            </p>
+                        </div>
+
+                        <!-- Item 4: Pre-2024 -->
+                        <div class="relative pl-8 md:pl-12">
+                            <div
+                                class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-gray-600 border border-gray-400">
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
+                                <span class="font-mono text-gray-500 text-sm">Pre-2024</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Web Developer & Gamer</h3>
+                            <div class="text-sm text-gray-400 font-mono mb-4">Early Days</div>
+                            <p class="text-gray-300 max-w-2xl leading-relaxed">
+                                Passionate gamer turned developer. Built web applications and explored programming
+                                fundamentals before discovering the world of decentralized technology.
                             </p>
                         </div>
                     </div>
@@ -442,14 +534,17 @@
 
                 <!-- CTA -->
                 <div class="pt-12 border-t border-gray-800">
-                    <div class="bg-white/5 border border-gray-800 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div
+                        class="bg-white/5 border border-gray-800 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
                             <h3 class="text-xl font-bold text-white mb-2">Need these skills on your team?</h3>
                             <p class="text-gray-400">Available for audits and contract work.</p>
                         </div>
-                        <a href="https://p.superdesign.dev/draft/24f4a714-4cb6-4655-ad3e-6c8d67aeb5dd" class="group flex items-center gap-3 px-6 py-3 bg-[#00ff88] text-black font-bold font-mono rounded-lg hover:shadow-[0_0_20px_rgba(0,255,136,0.4)] transition-all">
+                        <a href="06-contact-services.html"
+                            class="group flex items-center gap-3 px-6 py-3 bg-[#00ff88] text-black font-bold font-mono rounded-lg hover:shadow-[0_0_20px_rgba(0,255,136,0.4)] transition-all">
                             <span>Start_Collaboration()</span>
-                            <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                            <iconify-icon icon="lucide:arrow-right"
+                                class="group-hover:translate-x-1 transition-transform"></iconify-icon>
                         </a>
                     </div>
                 </div>
@@ -457,5 +552,11 @@
             </div>
         </main>
     </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/enhancements.js"></script>
+    <script src="js/search.js"></script>
 </body>
+
 </html>
